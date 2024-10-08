@@ -1,0 +1,1710 @@
+items:
+- metadata:
+    annotations:
+      cnpg.io/nodeSerial: "1"
+      cnpg.io/operatorVersion: 1.20.6
+      cnpg.io/podEnvHash: 56b46679d
+      cnpg.io/podSpec: '{"volumes":[{"name":"pgdata","persistentVolumeClaim":{"claimName":"cluster-example-1"}},{"name":"scratch-data","emptyDir":{}},{"name":"shm","emptyDir":{"medium":"Memory"}},{"name":"superuser-secret","secret":{"secretName":"cluster-example-superuser"}},{"name":"app-secret","secret":{"secretName":"cluster-example-app"}}],"initContainers":[{"name":"bootstrap-controller","image":"ghcr.io/cloudnative-pg/cloudnative-pg:1.20.6","command":["/manager","bootstrap","/controller/manager","--log-level=info"],"resources":{},"volumeMounts":[{"name":"pgdata","mountPath":"/var/lib/postgresql/data"},{"name":"scratch-data","mountPath":"/run"},{"name":"scratch-data","mountPath":"/controller"},{"name":"shm","mountPath":"/dev/shm"},{"name":"superuser-secret","mountPath":"/etc/superuser-secret"},{"name":"app-secret","mountPath":"/etc/app-secret"}],"securityContext":{"capabilities":{"drop":["ALL"]},"privileged":false,"runAsNonRoot":true,"readOnlyRootFilesystem":true,"allowPrivilegeEscalation":false,"seccompProfile":{"type":"RuntimeDefault"}}}],"containers":[{"name":"postgres","image":"ghcr.io/cloudnative-pg/postgresql:16.1","command":["/controller/manager","instance","run","--log-level=info"],"ports":[{"name":"postgresql","containerPort":5432,"protocol":"TCP"},{"name":"metrics","containerPort":9187,"protocol":"TCP"},{"name":"status","containerPort":8000,"protocol":"TCP"}],"env":[{"name":"PGDATA","value":"/var/lib/postgresql/data/pgdata"},{"name":"POD_NAME","value":"cluster-example-1"},{"name":"NAMESPACE","value":"default"},{"name":"CLUSTER_NAME","value":"cluster-example"},{"name":"PGPORT","value":"5432"},{"name":"PGHOST","value":"/controller/run"}],"resources":{},"volumeMounts":[{"name":"pgdata","mountPath":"/var/lib/postgresql/data"},{"name":"scratch-data","mountPath":"/run"},{"name":"scratch-data","mountPath":"/controller"},{"name":"shm","mountPath":"/dev/shm"},{"name":"superuser-secret","mountPath":"/etc/superuser-secret"},{"name":"app-secret","mountPath":"/etc/app-secret"}],"livenessProbe":{"httpGet":{"path":"/healthz","port":8000},"timeoutSeconds":5,"periodSeconds":10},"readinessProbe":{"httpGet":{"path":"/readyz","port":8000},"timeoutSeconds":5,"periodSeconds":10},"startupProbe":{"httpGet":{"path":"/healthz","port":8000},"timeoutSeconds":5,"periodSeconds":10,"failureThreshold":360},"securityContext":{"capabilities":{"drop":["ALL"]},"privileged":false,"runAsNonRoot":true,"readOnlyRootFilesystem":true,"allowPrivilegeEscalation":false,"seccompProfile":{"type":"RuntimeDefault"}}}],"terminationGracePeriodSeconds":1800,"serviceAccountName":"cluster-example","securityContext":{"runAsUser":26,"runAsGroup":26,"runAsNonRoot":true,"fsGroup":26,"seccompProfile":{"type":"RuntimeDefault"}},"hostname":"cluster-example-1","affinity":{"podAntiAffinity":{"preferredDuringSchedulingIgnoredDuringExecution":[{"weight":100,"podAffinityTerm":{"labelSelector":{"matchExpressions":[{"key":"cnpg.io/cluster","operator":"In","values":["cluster-example"]}]},"topologyKey":"kubernetes.io/hostname"}}]}}}'
+    creationTimestamp: "2024-10-08T08:11:31Z"
+    labels:
+      cnpg.io/cluster: cluster-example
+      cnpg.io/instanceName: cluster-example-1
+      cnpg.io/instanceRole: primary
+      cnpg.io/podRole: instance
+      postgresql: cluster-example
+      role: primary
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:cnpg.io/nodeSerial: {}
+            f:cnpg.io/operatorVersion: {}
+            f:cnpg.io/podEnvHash: {}
+            f:cnpg.io/podSpec: {}
+          f:labels:
+            .: {}
+            f:cnpg.io/cluster: {}
+            f:cnpg.io/instanceName: {}
+            f:cnpg.io/instanceRole: {}
+            f:cnpg.io/podRole: {}
+            f:postgresql: {}
+            f:role: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"8401e567-5851-4cc0-84cd-f94c333d7e3a"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:podAntiAffinity:
+              .: {}
+              f:preferredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"postgres"}:
+              .: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"CLUSTER_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"NAMESPACE"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"PGDATA"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"PGHOST"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"PGPORT"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"POD_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:livenessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":5432,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+                k:{"containerPort":8000,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+                k:{"containerPort":9187,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:readinessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:resources: {}
+              f:securityContext:
+                .: {}
+                f:allowPrivilegeEscalation: {}
+                f:capabilities:
+                  .: {}
+                  f:drop: {}
+                f:privileged: {}
+                f:readOnlyRootFilesystem: {}
+                f:runAsNonRoot: {}
+                f:seccompProfile:
+                  .: {}
+                  f:type: {}
+              f:startupProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/controller"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/dev/shm"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/etc/app-secret"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/etc/superuser-secret"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/run"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/var/lib/postgresql/data"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:hostname: {}
+          f:initContainers:
+            .: {}
+            k:{"name":"bootstrap-controller"}:
+              .: {}
+              f:command: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:resources: {}
+              f:securityContext:
+                .: {}
+                f:allowPrivilegeEscalation: {}
+                f:capabilities:
+                  .: {}
+                  f:drop: {}
+                f:privileged: {}
+                f:readOnlyRootFilesystem: {}
+                f:runAsNonRoot: {}
+                f:seccompProfile:
+                  .: {}
+                  f:type: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/controller"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/dev/shm"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/etc/app-secret"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/etc/superuser-secret"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/run"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/var/lib/postgresql/data"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext:
+            .: {}
+            f:fsGroup: {}
+            f:runAsGroup: {}
+            f:runAsNonRoot: {}
+            f:runAsUser: {}
+            f:seccompProfile:
+              .: {}
+              f:type: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:volumes:
+            .: {}
+            k:{"name":"app-secret"}:
+              .: {}
+              f:name: {}
+              f:secret:
+                .: {}
+                f:defaultMode: {}
+                f:secretName: {}
+            k:{"name":"pgdata"}:
+              .: {}
+              f:name: {}
+              f:persistentVolumeClaim:
+                .: {}
+                f:claimName: {}
+            k:{"name":"scratch-data"}:
+              .: {}
+              f:emptyDir: {}
+              f:name: {}
+            k:{"name":"shm"}:
+              .: {}
+              f:emptyDir:
+                .: {}
+                f:medium: {}
+              f:name: {}
+            k:{"name":"superuser-secret"}:
+              .: {}
+              f:name: {}
+              f:secret:
+                .: {}
+                f:defaultMode: {}
+                f:secretName: {}
+      manager: manager
+      operation: Update
+      time: "2024-10-08T08:11:33Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:initContainerStatuses: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.244.0.8"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2024-10-08T08:11:42Z"
+    name: cluster-example-1
+    namespace: default
+    ownerReferences:
+    - apiVersion: postgresql.cnpg.io/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Cluster
+      name: cluster-example
+      uid: 8401e567-5851-4cc0-84cd-f94c333d7e3a
+    resourceVersion: "827"
+    uid: e1e49089-912e-4a12-ac72-a5ec8e20098e
+  spec:
+    affinity:
+      podAntiAffinity:
+        preferredDuringSchedulingIgnoredDuringExecution:
+        - podAffinityTerm:
+            labelSelector:
+              matchExpressions:
+              - key: cnpg.io/cluster
+                operator: In
+                values:
+                - cluster-example
+            topologyKey: kubernetes.io/hostname
+          weight: 100
+    containers:
+    - command:
+      - /controller/manager
+      - instance
+      - run
+      - --log-level=info
+      env:
+      - name: PGDATA
+        value: /var/lib/postgresql/data/pgdata
+      - name: POD_NAME
+        value: cluster-example-1
+      - name: NAMESPACE
+        value: default
+      - name: CLUSTER_NAME
+        value: cluster-example
+      - name: PGPORT
+        value: "5432"
+      - name: PGHOST
+        value: /controller/run
+      image: ghcr.io/cloudnative-pg/postgresql:16.1
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /healthz
+          port: 8000
+          scheme: HTTP
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 5
+      name: postgres
+      ports:
+      - containerPort: 5432
+        name: postgresql
+        protocol: TCP
+      - containerPort: 9187
+        name: metrics
+        protocol: TCP
+      - containerPort: 8000
+        name: status
+        protocol: TCP
+      readinessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /readyz
+          port: 8000
+          scheme: HTTP
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 5
+      resources: {}
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+          - ALL
+        privileged: false
+        readOnlyRootFilesystem: true
+        runAsNonRoot: true
+        seccompProfile:
+          type: RuntimeDefault
+      startupProbe:
+        failureThreshold: 360
+        httpGet:
+          path: /healthz
+          port: 8000
+          scheme: HTTP
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 5
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/lib/postgresql/data
+        name: pgdata
+      - mountPath: /run
+        name: scratch-data
+      - mountPath: /controller
+        name: scratch-data
+      - mountPath: /dev/shm
+        name: shm
+      - mountPath: /etc/superuser-secret
+        name: superuser-secret
+      - mountPath: /etc/app-secret
+        name: app-secret
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-tghk9
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    hostname: cluster-example-1
+    initContainers:
+    - command:
+      - /manager
+      - bootstrap
+      - /controller/manager
+      - --log-level=info
+      image: ghcr.io/cloudnative-pg/cloudnative-pg:1.20.6
+      imagePullPolicy: IfNotPresent
+      name: bootstrap-controller
+      resources: {}
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+          - ALL
+        privileged: false
+        readOnlyRootFilesystem: true
+        runAsNonRoot: true
+        seccompProfile:
+          type: RuntimeDefault
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/lib/postgresql/data
+        name: pgdata
+      - mountPath: /run
+        name: scratch-data
+      - mountPath: /controller
+        name: scratch-data
+      - mountPath: /dev/shm
+        name: shm
+      - mountPath: /etc/superuser-secret
+        name: superuser-secret
+      - mountPath: /etc/app-secret
+        name: app-secret
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-tghk9
+        readOnly: true
+    nodeName: pg-control-plane
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext:
+      fsGroup: 26
+      runAsGroup: 26
+      runAsNonRoot: true
+      runAsUser: 26
+      seccompProfile:
+        type: RuntimeDefault
+    serviceAccount: cluster-example
+    serviceAccountName: cluster-example
+    terminationGracePeriodSeconds: 1800
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: pgdata
+      persistentVolumeClaim:
+        claimName: cluster-example-1
+    - emptyDir: {}
+      name: scratch-data
+    - emptyDir:
+        medium: Memory
+      name: shm
+    - name: superuser-secret
+      secret:
+        defaultMode: 420
+        secretName: cluster-example-superuser
+    - name: app-secret
+      secret:
+        defaultMode: 420
+        secretName: cluster-example-app
+    - name: kube-api-access-tghk9
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-10-08T08:11:32Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-10-08T08:11:42Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-10-08T08:11:42Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-10-08T08:11:31Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://4b89153cc7fe1fe2d5e73e8018b101838cec5913592e091d1ad518703818de5a
+      image: ghcr.io/cloudnative-pg/postgresql:16.1
+      imageID: ghcr.io/cloudnative-pg/postgresql@sha256:6e0bdf657ef224339abc6cd7ad669b049fb26875e7d9456d46bf40ff38e26b1b
+      lastState: {}
+      name: postgres
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2024-10-08T08:11:32Z"
+    hostIP: 172.18.0.3
+    initContainerStatuses:
+    - containerID: containerd://0b162b8d1f244325d0e940e5da93063eb3ae72c3f5230f3ec6a9073641e3383f
+      image: ghcr.io/cloudnative-pg/cloudnative-pg:1.20.6
+      imageID: ghcr.io/cloudnative-pg/cloudnative-pg@sha256:c344e4bb6cdaffddf65ddc496b735ce96d96d742ac2a14cee9978a3e2442cde7
+      lastState: {}
+      name: bootstrap-controller
+      ready: true
+      restartCount: 0
+      state:
+        terminated:
+          containerID: containerd://0b162b8d1f244325d0e940e5da93063eb3ae72c3f5230f3ec6a9073641e3383f
+          exitCode: 0
+          finishedAt: "2024-10-08T08:11:32Z"
+          reason: Completed
+          startedAt: "2024-10-08T08:11:32Z"
+    phase: Running
+    podIP: 10.244.0.8
+    podIPs:
+    - ip: 10.244.0.8
+    qosClass: BestEffort
+    startTime: "2024-10-08T08:11:31Z"
+- metadata:
+    annotations:
+      cnpg.io/nodeSerial: "2"
+      cnpg.io/operatorVersion: 1.20.6
+      cnpg.io/podEnvHash: 7c47c477f7
+      cnpg.io/podSpec: '{"volumes":[{"name":"pgdata","persistentVolumeClaim":{"claimName":"cluster-example-2"}},{"name":"scratch-data","emptyDir":{}},{"name":"shm","emptyDir":{"medium":"Memory"}},{"name":"superuser-secret","secret":{"secretName":"cluster-example-superuser"}},{"name":"app-secret","secret":{"secretName":"cluster-example-app"}}],"initContainers":[{"name":"bootstrap-controller","image":"ghcr.io/cloudnative-pg/cloudnative-pg:1.20.6","command":["/manager","bootstrap","/controller/manager","--log-level=info"],"resources":{},"volumeMounts":[{"name":"pgdata","mountPath":"/var/lib/postgresql/data"},{"name":"scratch-data","mountPath":"/run"},{"name":"scratch-data","mountPath":"/controller"},{"name":"shm","mountPath":"/dev/shm"},{"name":"superuser-secret","mountPath":"/etc/superuser-secret"},{"name":"app-secret","mountPath":"/etc/app-secret"}],"securityContext":{"capabilities":{"drop":["ALL"]},"privileged":false,"runAsNonRoot":true,"readOnlyRootFilesystem":true,"allowPrivilegeEscalation":false,"seccompProfile":{"type":"RuntimeDefault"}}}],"containers":[{"name":"postgres","image":"ghcr.io/cloudnative-pg/postgresql:16.1","command":["/controller/manager","instance","run","--log-level=info"],"ports":[{"name":"postgresql","containerPort":5432,"protocol":"TCP"},{"name":"metrics","containerPort":9187,"protocol":"TCP"},{"name":"status","containerPort":8000,"protocol":"TCP"}],"env":[{"name":"PGDATA","value":"/var/lib/postgresql/data/pgdata"},{"name":"POD_NAME","value":"cluster-example-2"},{"name":"NAMESPACE","value":"default"},{"name":"CLUSTER_NAME","value":"cluster-example"},{"name":"PGPORT","value":"5432"},{"name":"PGHOST","value":"/controller/run"}],"resources":{},"volumeMounts":[{"name":"pgdata","mountPath":"/var/lib/postgresql/data"},{"name":"scratch-data","mountPath":"/run"},{"name":"scratch-data","mountPath":"/controller"},{"name":"shm","mountPath":"/dev/shm"},{"name":"superuser-secret","mountPath":"/etc/superuser-secret"},{"name":"app-secret","mountPath":"/etc/app-secret"}],"livenessProbe":{"httpGet":{"path":"/healthz","port":8000},"timeoutSeconds":5,"periodSeconds":10},"readinessProbe":{"httpGet":{"path":"/readyz","port":8000},"timeoutSeconds":5,"periodSeconds":10},"startupProbe":{"httpGet":{"path":"/healthz","port":8000},"timeoutSeconds":5,"periodSeconds":10,"failureThreshold":360},"securityContext":{"capabilities":{"drop":["ALL"]},"privileged":false,"runAsNonRoot":true,"readOnlyRootFilesystem":true,"allowPrivilegeEscalation":false,"seccompProfile":{"type":"RuntimeDefault"}}}],"terminationGracePeriodSeconds":1800,"serviceAccountName":"cluster-example","securityContext":{"runAsUser":26,"runAsGroup":26,"runAsNonRoot":true,"fsGroup":26,"seccompProfile":{"type":"RuntimeDefault"}},"hostname":"cluster-example-2","affinity":{"podAntiAffinity":{"preferredDuringSchedulingIgnoredDuringExecution":[{"weight":100,"podAffinityTerm":{"labelSelector":{"matchExpressions":[{"key":"cnpg.io/cluster","operator":"In","values":["cluster-example"]}]},"topologyKey":"kubernetes.io/hostname"}}]}}}'
+    creationTimestamp: "2024-10-08T08:11:51Z"
+    labels:
+      cnpg.io/cluster: cluster-example
+      cnpg.io/instanceName: cluster-example-2
+      cnpg.io/instanceRole: replica
+      cnpg.io/podRole: instance
+      postgresql: cluster-example
+      role: replica
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:cnpg.io/nodeSerial: {}
+            f:cnpg.io/operatorVersion: {}
+            f:cnpg.io/podEnvHash: {}
+            f:cnpg.io/podSpec: {}
+          f:labels:
+            .: {}
+            f:cnpg.io/cluster: {}
+            f:cnpg.io/instanceName: {}
+            f:cnpg.io/instanceRole: {}
+            f:cnpg.io/podRole: {}
+            f:postgresql: {}
+            f:role: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"8401e567-5851-4cc0-84cd-f94c333d7e3a"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:podAntiAffinity:
+              .: {}
+              f:preferredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"postgres"}:
+              .: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"CLUSTER_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"NAMESPACE"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"PGDATA"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"PGHOST"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"PGPORT"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"POD_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:livenessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":5432,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+                k:{"containerPort":8000,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+                k:{"containerPort":9187,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:readinessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:resources: {}
+              f:securityContext:
+                .: {}
+                f:allowPrivilegeEscalation: {}
+                f:capabilities:
+                  .: {}
+                  f:drop: {}
+                f:privileged: {}
+                f:readOnlyRootFilesystem: {}
+                f:runAsNonRoot: {}
+                f:seccompProfile:
+                  .: {}
+                  f:type: {}
+              f:startupProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/controller"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/dev/shm"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/etc/app-secret"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/etc/superuser-secret"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/run"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/var/lib/postgresql/data"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:hostname: {}
+          f:initContainers:
+            .: {}
+            k:{"name":"bootstrap-controller"}:
+              .: {}
+              f:command: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:resources: {}
+              f:securityContext:
+                .: {}
+                f:allowPrivilegeEscalation: {}
+                f:capabilities:
+                  .: {}
+                  f:drop: {}
+                f:privileged: {}
+                f:readOnlyRootFilesystem: {}
+                f:runAsNonRoot: {}
+                f:seccompProfile:
+                  .: {}
+                  f:type: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/controller"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/dev/shm"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/etc/app-secret"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/etc/superuser-secret"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/run"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/var/lib/postgresql/data"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext:
+            .: {}
+            f:fsGroup: {}
+            f:runAsGroup: {}
+            f:runAsNonRoot: {}
+            f:runAsUser: {}
+            f:seccompProfile:
+              .: {}
+              f:type: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:volumes:
+            .: {}
+            k:{"name":"app-secret"}:
+              .: {}
+              f:name: {}
+              f:secret:
+                .: {}
+                f:defaultMode: {}
+                f:secretName: {}
+            k:{"name":"pgdata"}:
+              .: {}
+              f:name: {}
+              f:persistentVolumeClaim:
+                .: {}
+                f:claimName: {}
+            k:{"name":"scratch-data"}:
+              .: {}
+              f:emptyDir: {}
+              f:name: {}
+            k:{"name":"shm"}:
+              .: {}
+              f:emptyDir:
+                .: {}
+                f:medium: {}
+              f:name: {}
+            k:{"name":"superuser-secret"}:
+              .: {}
+              f:name: {}
+              f:secret:
+                .: {}
+                f:defaultMode: {}
+                f:secretName: {}
+      manager: manager
+      operation: Update
+      time: "2024-10-08T08:11:53Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:initContainerStatuses: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.244.0.11"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2024-10-08T08:12:02Z"
+    name: cluster-example-2
+    namespace: default
+    ownerReferences:
+    - apiVersion: postgresql.cnpg.io/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Cluster
+      name: cluster-example
+      uid: 8401e567-5851-4cc0-84cd-f94c333d7e3a
+    resourceVersion: "947"
+    uid: 7be2adf1-cfc7-405b-bcd9-f46a57f3838e
+  spec:
+    affinity:
+      podAntiAffinity:
+        preferredDuringSchedulingIgnoredDuringExecution:
+        - podAffinityTerm:
+            labelSelector:
+              matchExpressions:
+              - key: cnpg.io/cluster
+                operator: In
+                values:
+                - cluster-example
+            topologyKey: kubernetes.io/hostname
+          weight: 100
+    containers:
+    - command:
+      - /controller/manager
+      - instance
+      - run
+      - --log-level=info
+      env:
+      - name: PGDATA
+        value: /var/lib/postgresql/data/pgdata
+      - name: POD_NAME
+        value: cluster-example-2
+      - name: NAMESPACE
+        value: default
+      - name: CLUSTER_NAME
+        value: cluster-example
+      - name: PGPORT
+        value: "5432"
+      - name: PGHOST
+        value: /controller/run
+      image: ghcr.io/cloudnative-pg/postgresql:16.1
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /healthz
+          port: 8000
+          scheme: HTTP
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 5
+      name: postgres
+      ports:
+      - containerPort: 5432
+        name: postgresql
+        protocol: TCP
+      - containerPort: 9187
+        name: metrics
+        protocol: TCP
+      - containerPort: 8000
+        name: status
+        protocol: TCP
+      readinessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /readyz
+          port: 8000
+          scheme: HTTP
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 5
+      resources: {}
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+          - ALL
+        privileged: false
+        readOnlyRootFilesystem: true
+        runAsNonRoot: true
+        seccompProfile:
+          type: RuntimeDefault
+      startupProbe:
+        failureThreshold: 360
+        httpGet:
+          path: /healthz
+          port: 8000
+          scheme: HTTP
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 5
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/lib/postgresql/data
+        name: pgdata
+      - mountPath: /run
+        name: scratch-data
+      - mountPath: /controller
+        name: scratch-data
+      - mountPath: /dev/shm
+        name: shm
+      - mountPath: /etc/superuser-secret
+        name: superuser-secret
+      - mountPath: /etc/app-secret
+        name: app-secret
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-k9twr
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    hostname: cluster-example-2
+    initContainers:
+    - command:
+      - /manager
+      - bootstrap
+      - /controller/manager
+      - --log-level=info
+      image: ghcr.io/cloudnative-pg/cloudnative-pg:1.20.6
+      imagePullPolicy: IfNotPresent
+      name: bootstrap-controller
+      resources: {}
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+          - ALL
+        privileged: false
+        readOnlyRootFilesystem: true
+        runAsNonRoot: true
+        seccompProfile:
+          type: RuntimeDefault
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/lib/postgresql/data
+        name: pgdata
+      - mountPath: /run
+        name: scratch-data
+      - mountPath: /controller
+        name: scratch-data
+      - mountPath: /dev/shm
+        name: shm
+      - mountPath: /etc/superuser-secret
+        name: superuser-secret
+      - mountPath: /etc/app-secret
+        name: app-secret
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-k9twr
+        readOnly: true
+    nodeName: pg-control-plane
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext:
+      fsGroup: 26
+      runAsGroup: 26
+      runAsNonRoot: true
+      runAsUser: 26
+      seccompProfile:
+        type: RuntimeDefault
+    serviceAccount: cluster-example
+    serviceAccountName: cluster-example
+    terminationGracePeriodSeconds: 1800
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: pgdata
+      persistentVolumeClaim:
+        claimName: cluster-example-2
+    - emptyDir: {}
+      name: scratch-data
+    - emptyDir:
+        medium: Memory
+      name: shm
+    - name: superuser-secret
+      secret:
+        defaultMode: 420
+        secretName: cluster-example-superuser
+    - name: app-secret
+      secret:
+        defaultMode: 420
+        secretName: cluster-example-app
+    - name: kube-api-access-k9twr
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-10-08T08:11:52Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-10-08T08:12:02Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-10-08T08:12:02Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-10-08T08:11:51Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://fe8e723d93af32e988ab5e1991d77862e096684cda7db9367941bbe766cb187f
+      image: ghcr.io/cloudnative-pg/postgresql:16.1
+      imageID: ghcr.io/cloudnative-pg/postgresql@sha256:6e0bdf657ef224339abc6cd7ad669b049fb26875e7d9456d46bf40ff38e26b1b
+      lastState: {}
+      name: postgres
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2024-10-08T08:11:52Z"
+    hostIP: 172.18.0.3
+    initContainerStatuses:
+    - containerID: containerd://f17cae5b4e4e9bf65b81427e00199ff56b0480dc4fceb26c3dbc2ed9270577e0
+      image: ghcr.io/cloudnative-pg/cloudnative-pg:1.20.6
+      imageID: ghcr.io/cloudnative-pg/cloudnative-pg@sha256:c344e4bb6cdaffddf65ddc496b735ce96d96d742ac2a14cee9978a3e2442cde7
+      lastState: {}
+      name: bootstrap-controller
+      ready: true
+      restartCount: 0
+      state:
+        terminated:
+          containerID: containerd://f17cae5b4e4e9bf65b81427e00199ff56b0480dc4fceb26c3dbc2ed9270577e0
+          exitCode: 0
+          finishedAt: "2024-10-08T08:11:52Z"
+          reason: Completed
+          startedAt: "2024-10-08T08:11:52Z"
+    phase: Running
+    podIP: 10.244.0.11
+    podIPs:
+    - ip: 10.244.0.11
+    qosClass: BestEffort
+    startTime: "2024-10-08T08:11:51Z"
+- metadata:
+    annotations:
+      cnpg.io/nodeSerial: "3"
+      cnpg.io/operatorVersion: 1.20.6
+      cnpg.io/podEnvHash: 7f5bd876c6
+      cnpg.io/podSpec: '{"volumes":[{"name":"pgdata","persistentVolumeClaim":{"claimName":"cluster-example-3"}},{"name":"scratch-data","emptyDir":{}},{"name":"shm","emptyDir":{"medium":"Memory"}},{"name":"superuser-secret","secret":{"secretName":"cluster-example-superuser"}},{"name":"app-secret","secret":{"secretName":"cluster-example-app"}}],"initContainers":[{"name":"bootstrap-controller","image":"ghcr.io/cloudnative-pg/cloudnative-pg:1.20.6","command":["/manager","bootstrap","/controller/manager","--log-level=info"],"resources":{},"volumeMounts":[{"name":"pgdata","mountPath":"/var/lib/postgresql/data"},{"name":"scratch-data","mountPath":"/run"},{"name":"scratch-data","mountPath":"/controller"},{"name":"shm","mountPath":"/dev/shm"},{"name":"superuser-secret","mountPath":"/etc/superuser-secret"},{"name":"app-secret","mountPath":"/etc/app-secret"}],"securityContext":{"capabilities":{"drop":["ALL"]},"privileged":false,"runAsNonRoot":true,"readOnlyRootFilesystem":true,"allowPrivilegeEscalation":false,"seccompProfile":{"type":"RuntimeDefault"}}}],"containers":[{"name":"postgres","image":"ghcr.io/cloudnative-pg/postgresql:16.1","command":["/controller/manager","instance","run","--log-level=info"],"ports":[{"name":"postgresql","containerPort":5432,"protocol":"TCP"},{"name":"metrics","containerPort":9187,"protocol":"TCP"},{"name":"status","containerPort":8000,"protocol":"TCP"}],"env":[{"name":"PGDATA","value":"/var/lib/postgresql/data/pgdata"},{"name":"POD_NAME","value":"cluster-example-3"},{"name":"NAMESPACE","value":"default"},{"name":"CLUSTER_NAME","value":"cluster-example"},{"name":"PGPORT","value":"5432"},{"name":"PGHOST","value":"/controller/run"}],"resources":{},"volumeMounts":[{"name":"pgdata","mountPath":"/var/lib/postgresql/data"},{"name":"scratch-data","mountPath":"/run"},{"name":"scratch-data","mountPath":"/controller"},{"name":"shm","mountPath":"/dev/shm"},{"name":"superuser-secret","mountPath":"/etc/superuser-secret"},{"name":"app-secret","mountPath":"/etc/app-secret"}],"livenessProbe":{"httpGet":{"path":"/healthz","port":8000},"timeoutSeconds":5,"periodSeconds":10},"readinessProbe":{"httpGet":{"path":"/readyz","port":8000},"timeoutSeconds":5,"periodSeconds":10},"startupProbe":{"httpGet":{"path":"/healthz","port":8000},"timeoutSeconds":5,"periodSeconds":10,"failureThreshold":360},"securityContext":{"capabilities":{"drop":["ALL"]},"privileged":false,"runAsNonRoot":true,"readOnlyRootFilesystem":true,"allowPrivilegeEscalation":false,"seccompProfile":{"type":"RuntimeDefault"}}}],"terminationGracePeriodSeconds":1800,"serviceAccountName":"cluster-example","securityContext":{"runAsUser":26,"runAsGroup":26,"runAsNonRoot":true,"fsGroup":26,"seccompProfile":{"type":"RuntimeDefault"}},"hostname":"cluster-example-3","affinity":{"podAntiAffinity":{"preferredDuringSchedulingIgnoredDuringExecution":[{"weight":100,"podAffinityTerm":{"labelSelector":{"matchExpressions":[{"key":"cnpg.io/cluster","operator":"In","values":["cluster-example"]}]},"topologyKey":"kubernetes.io/hostname"}}]}}}'
+    creationTimestamp: "2024-10-08T08:12:12Z"
+    labels:
+      cnpg.io/cluster: cluster-example
+      cnpg.io/instanceName: cluster-example-3
+      cnpg.io/instanceRole: replica
+      cnpg.io/podRole: instance
+      postgresql: cluster-example
+      role: replica
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:cnpg.io/nodeSerial: {}
+            f:cnpg.io/operatorVersion: {}
+            f:cnpg.io/podEnvHash: {}
+            f:cnpg.io/podSpec: {}
+          f:labels:
+            .: {}
+            f:cnpg.io/cluster: {}
+            f:cnpg.io/instanceName: {}
+            f:cnpg.io/instanceRole: {}
+            f:cnpg.io/podRole: {}
+            f:postgresql: {}
+            f:role: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"8401e567-5851-4cc0-84cd-f94c333d7e3a"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:podAntiAffinity:
+              .: {}
+              f:preferredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"postgres"}:
+              .: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"CLUSTER_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"NAMESPACE"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"PGDATA"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"PGHOST"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"PGPORT"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"POD_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:livenessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":5432,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+                k:{"containerPort":8000,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+                k:{"containerPort":9187,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:readinessProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:resources: {}
+              f:securityContext:
+                .: {}
+                f:allowPrivilegeEscalation: {}
+                f:capabilities:
+                  .: {}
+                  f:drop: {}
+                f:privileged: {}
+                f:readOnlyRootFilesystem: {}
+                f:runAsNonRoot: {}
+                f:seccompProfile:
+                  .: {}
+                  f:type: {}
+              f:startupProbe:
+                .: {}
+                f:failureThreshold: {}
+                f:httpGet:
+                  .: {}
+                  f:path: {}
+                  f:port: {}
+                  f:scheme: {}
+                f:periodSeconds: {}
+                f:successThreshold: {}
+                f:timeoutSeconds: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/controller"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/dev/shm"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/etc/app-secret"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/etc/superuser-secret"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/run"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/var/lib/postgresql/data"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:hostname: {}
+          f:initContainers:
+            .: {}
+            k:{"name":"bootstrap-controller"}:
+              .: {}
+              f:command: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:resources: {}
+              f:securityContext:
+                .: {}
+                f:allowPrivilegeEscalation: {}
+                f:capabilities:
+                  .: {}
+                  f:drop: {}
+                f:privileged: {}
+                f:readOnlyRootFilesystem: {}
+                f:runAsNonRoot: {}
+                f:seccompProfile:
+                  .: {}
+                  f:type: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/controller"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/dev/shm"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/etc/app-secret"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/etc/superuser-secret"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/run"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/var/lib/postgresql/data"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext:
+            .: {}
+            f:fsGroup: {}
+            f:runAsGroup: {}
+            f:runAsNonRoot: {}
+            f:runAsUser: {}
+            f:seccompProfile:
+              .: {}
+              f:type: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:volumes:
+            .: {}
+            k:{"name":"app-secret"}:
+              .: {}
+              f:name: {}
+              f:secret:
+                .: {}
+                f:defaultMode: {}
+                f:secretName: {}
+            k:{"name":"pgdata"}:
+              .: {}
+              f:name: {}
+              f:persistentVolumeClaim:
+                .: {}
+                f:claimName: {}
+            k:{"name":"scratch-data"}:
+              .: {}
+              f:emptyDir: {}
+              f:name: {}
+            k:{"name":"shm"}:
+              .: {}
+              f:emptyDir:
+                .: {}
+                f:medium: {}
+              f:name: {}
+            k:{"name":"superuser-secret"}:
+              .: {}
+              f:name: {}
+              f:secret:
+                .: {}
+                f:defaultMode: {}
+                f:secretName: {}
+      manager: manager
+      operation: Update
+      time: "2024-10-08T08:12:14Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:initContainerStatuses: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.244.0.14"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2024-10-08T08:12:23Z"
+    name: cluster-example-3
+    namespace: default
+    ownerReferences:
+    - apiVersion: postgresql.cnpg.io/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Cluster
+      name: cluster-example
+      uid: 8401e567-5851-4cc0-84cd-f94c333d7e3a
+    resourceVersion: "1066"
+    uid: 0a1af0c7-14b5-460d-9c4c-25c173529035
+  spec:
+    affinity:
+      podAntiAffinity:
+        preferredDuringSchedulingIgnoredDuringExecution:
+        - podAffinityTerm:
+            labelSelector:
+              matchExpressions:
+              - key: cnpg.io/cluster
+                operator: In
+                values:
+                - cluster-example
+            topologyKey: kubernetes.io/hostname
+          weight: 100
+    containers:
+    - command:
+      - /controller/manager
+      - instance
+      - run
+      - --log-level=info
+      env:
+      - name: PGDATA
+        value: /var/lib/postgresql/data/pgdata
+      - name: POD_NAME
+        value: cluster-example-3
+      - name: NAMESPACE
+        value: default
+      - name: CLUSTER_NAME
+        value: cluster-example
+      - name: PGPORT
+        value: "5432"
+      - name: PGHOST
+        value: /controller/run
+      image: ghcr.io/cloudnative-pg/postgresql:16.1
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /healthz
+          port: 8000
+          scheme: HTTP
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 5
+      name: postgres
+      ports:
+      - containerPort: 5432
+        name: postgresql
+        protocol: TCP
+      - containerPort: 9187
+        name: metrics
+        protocol: TCP
+      - containerPort: 8000
+        name: status
+        protocol: TCP
+      readinessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /readyz
+          port: 8000
+          scheme: HTTP
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 5
+      resources: {}
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+          - ALL
+        privileged: false
+        readOnlyRootFilesystem: true
+        runAsNonRoot: true
+        seccompProfile:
+          type: RuntimeDefault
+      startupProbe:
+        failureThreshold: 360
+        httpGet:
+          path: /healthz
+          port: 8000
+          scheme: HTTP
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 5
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/lib/postgresql/data
+        name: pgdata
+      - mountPath: /run
+        name: scratch-data
+      - mountPath: /controller
+        name: scratch-data
+      - mountPath: /dev/shm
+        name: shm
+      - mountPath: /etc/superuser-secret
+        name: superuser-secret
+      - mountPath: /etc/app-secret
+        name: app-secret
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-j2h2k
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    hostname: cluster-example-3
+    initContainers:
+    - command:
+      - /manager
+      - bootstrap
+      - /controller/manager
+      - --log-level=info
+      image: ghcr.io/cloudnative-pg/cloudnative-pg:1.20.6
+      imagePullPolicy: IfNotPresent
+      name: bootstrap-controller
+      resources: {}
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+          - ALL
+        privileged: false
+        readOnlyRootFilesystem: true
+        runAsNonRoot: true
+        seccompProfile:
+          type: RuntimeDefault
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/lib/postgresql/data
+        name: pgdata
+      - mountPath: /run
+        name: scratch-data
+      - mountPath: /controller
+        name: scratch-data
+      - mountPath: /dev/shm
+        name: shm
+      - mountPath: /etc/superuser-secret
+        name: superuser-secret
+      - mountPath: /etc/app-secret
+        name: app-secret
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-j2h2k
+        readOnly: true
+    nodeName: pg-control-plane
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext:
+      fsGroup: 26
+      runAsGroup: 26
+      runAsNonRoot: true
+      runAsUser: 26
+      seccompProfile:
+        type: RuntimeDefault
+    serviceAccount: cluster-example
+    serviceAccountName: cluster-example
+    terminationGracePeriodSeconds: 1800
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: pgdata
+      persistentVolumeClaim:
+        claimName: cluster-example-3
+    - emptyDir: {}
+      name: scratch-data
+    - emptyDir:
+        medium: Memory
+      name: shm
+    - name: superuser-secret
+      secret:
+        defaultMode: 420
+        secretName: cluster-example-superuser
+    - name: app-secret
+      secret:
+        defaultMode: 420
+        secretName: cluster-example-app
+    - name: kube-api-access-j2h2k
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-10-08T08:12:13Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-10-08T08:12:23Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-10-08T08:12:23Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-10-08T08:12:12Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://a0b32e8b021940a7f2b6f9951d0a02f8b7d43b54b6e18bdab616a4e180976011
+      image: ghcr.io/cloudnative-pg/postgresql:16.1
+      imageID: ghcr.io/cloudnative-pg/postgresql@sha256:6e0bdf657ef224339abc6cd7ad669b049fb26875e7d9456d46bf40ff38e26b1b
+      lastState: {}
+      name: postgres
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2024-10-08T08:12:13Z"
+    hostIP: 172.18.0.3
+    initContainerStatuses:
+    - containerID: containerd://89135e5a24b9b9bca7151fd8331fbcd38ae402c5087c834a12eca8b78f29dbfd
+      image: ghcr.io/cloudnative-pg/cloudnative-pg:1.20.6
+      imageID: ghcr.io/cloudnative-pg/cloudnative-pg@sha256:c344e4bb6cdaffddf65ddc496b735ce96d96d742ac2a14cee9978a3e2442cde7
+      lastState: {}
+      name: bootstrap-controller
+      ready: true
+      restartCount: 0
+      state:
+        terminated:
+          containerID: containerd://89135e5a24b9b9bca7151fd8331fbcd38ae402c5087c834a12eca8b78f29dbfd
+          exitCode: 0
+          finishedAt: "2024-10-08T08:12:13Z"
+          reason: Completed
+          startedAt: "2024-10-08T08:12:13Z"
+    phase: Running
+    podIP: 10.244.0.14
+    podIPs:
+    - ip: 10.244.0.14
+    qosClass: BestEffort
+    startTime: "2024-10-08T08:12:12Z"
+metadata:
+  resourceVersion: "4277"

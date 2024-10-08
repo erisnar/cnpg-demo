@@ -1,0 +1,3283 @@
+items:
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:00Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cluster-example-1-initdb-bd2xr
+    namespace: default
+    resourceVersion: "675"
+    uid: 042eca59-59ca-49c8-aff5-58f2f18c1339
+  lastTimestamp: "2024-10-08T08:11:00Z"
+  message: Successfully assigned default/cluster-example-1-initdb-bd2xr to pg-control-plane
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-08T08:11:00Z"
+    name: cluster-example-1-initdb-bd2xr.17fc6bf5cff58a2b
+    namespace: default
+    resourceVersion: "705"
+    uid: 16afed6a-31b5-4be6-bc71-89f7efe983c7
+  reason: Scheduled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{bootstrap-controller}
+    kind: Pod
+    name: cluster-example-1-initdb-bd2xr
+    namespace: default
+    resourceVersion: "704"
+    uid: 042eca59-59ca-49c8-aff5-58f2f18c1339
+  lastTimestamp: "2024-10-08T08:11:00Z"
+  message: Container image "ghcr.io/cloudnative-pg/cloudnative-pg:1.20.6" already
+    present on machine
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:00Z"
+    name: cluster-example-1-initdb-bd2xr.17fc6bf5e6cb25c1
+    namespace: default
+    resourceVersion: "707"
+    uid: 77a17c40-25a9-4dc9-b4b0-bb955d0c96cf
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{bootstrap-controller}
+    kind: Pod
+    name: cluster-example-1-initdb-bd2xr
+    namespace: default
+    resourceVersion: "704"
+    uid: 042eca59-59ca-49c8-aff5-58f2f18c1339
+  lastTimestamp: "2024-10-08T08:11:00Z"
+  message: Created container bootstrap-controller
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:00Z"
+    name: cluster-example-1-initdb-bd2xr.17fc6bf5e76362e6
+    namespace: default
+    resourceVersion: "708"
+    uid: eda498f4-3208-456d-b1d9-cfd3de2dffd1
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{bootstrap-controller}
+    kind: Pod
+    name: cluster-example-1-initdb-bd2xr
+    namespace: default
+    resourceVersion: "704"
+    uid: 042eca59-59ca-49c8-aff5-58f2f18c1339
+  lastTimestamp: "2024-10-08T08:11:00Z"
+  message: Started container bootstrap-controller
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:00Z"
+    name: cluster-example-1-initdb-bd2xr.17fc6bf5eb102c0c
+    namespace: default
+    resourceVersion: "709"
+    uid: a49e09a2-dc41-4a21-aac1-0651864856f2
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:01Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{initdb}
+    kind: Pod
+    name: cluster-example-1-initdb-bd2xr
+    namespace: default
+    resourceVersion: "704"
+    uid: 042eca59-59ca-49c8-aff5-58f2f18c1339
+  lastTimestamp: "2024-10-08T08:11:01Z"
+  message: Pulling image "ghcr.io/cloudnative-pg/postgresql:16.1"
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:01Z"
+    name: cluster-example-1-initdb-bd2xr.17fc6bf60bfc4c4f
+    namespace: default
+    resourceVersion: "712"
+    uid: 9d30a0c9-493a-4522-8660-7c40392a9807
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{initdb}
+    kind: Pod
+    name: cluster-example-1-initdb-bd2xr
+    namespace: default
+    resourceVersion: "704"
+    uid: 042eca59-59ca-49c8-aff5-58f2f18c1339
+  lastTimestamp: "2024-10-08T08:11:28Z"
+  message: Successfully pulled image "ghcr.io/cloudnative-pg/postgresql:16.1" in 26.607432054s
+    (26.607439304s including waiting)
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:28Z"
+    name: cluster-example-1-initdb-bd2xr.17fc6bfc3deeb965
+    namespace: default
+    resourceVersion: "762"
+    uid: 1060fb63-90d5-44d7-8e50-4984fac161dc
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{initdb}
+    kind: Pod
+    name: cluster-example-1-initdb-bd2xr
+    namespace: default
+    resourceVersion: "704"
+    uid: 042eca59-59ca-49c8-aff5-58f2f18c1339
+  lastTimestamp: "2024-10-08T08:11:28Z"
+  message: Created container initdb
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:28Z"
+    name: cluster-example-1-initdb-bd2xr.17fc6bfc3e56a278
+    namespace: default
+    resourceVersion: "763"
+    uid: 8d6c2265-047e-46d7-8634-67142f60865a
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{initdb}
+    kind: Pod
+    name: cluster-example-1-initdb-bd2xr
+    namespace: default
+    resourceVersion: "704"
+    uid: 042eca59-59ca-49c8-aff5-58f2f18c1339
+  lastTimestamp: "2024-10-08T08:11:28Z"
+  message: Started container initdb
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:28Z"
+    name: cluster-example-1-initdb-bd2xr.17fc6bfc4305dbef
+    namespace: default
+    resourceVersion: "764"
+    uid: 0a71d247-4d1f-4ae9-95d7-aec2a866401e
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:10:56Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: cluster-example-1-initdb
+    namespace: default
+    resourceVersion: "674"
+    uid: bbb9ccd7-ff82-4d9f-ba6a-f69e47204765
+  lastTimestamp: "2024-10-08T08:10:56Z"
+  message: 'Created pod: cluster-example-1-initdb-bd2xr'
+  metadata:
+    creationTimestamp: "2024-10-08T08:10:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-08T08:10:56Z"
+    name: cluster-example-1-initdb.17fc6bf4dff248db
+    namespace: default
+    resourceVersion: "676"
+    uid: e1706264-431f-42ff-ad3f-17ae3aea8380
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:31Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: cluster-example-1-initdb
+    namespace: default
+    resourceVersion: "777"
+    uid: bbb9ccd7-ff82-4d9f-ba6a-f69e47204765
+  lastTimestamp: "2024-10-08T08:11:31Z"
+  message: Job completed
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-08T08:11:31Z"
+    name: cluster-example-1-initdb.17fc6bfd1232ef7a
+    namespace: default
+    resourceVersion: "780"
+    uid: 55ad00b9-b168-4bca-b04f-9cc486827b7b
+  reason: Completed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:10:56Z"
+  involvedObject:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: cluster-example-1
+    namespace: default
+    resourceVersion: "669"
+    uid: c658b309-4869-46bd-991c-d00baea6e215
+  lastTimestamp: "2024-10-08T08:10:56Z"
+  message: waiting for first consumer to be created before binding
+  metadata:
+    creationTimestamp: "2024-10-08T08:10:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-08T08:10:56Z"
+    name: cluster-example-1.17fc6bf4dec72202
+    namespace: default
+    resourceVersion: "673"
+    uid: c5aca048-74b1-44f4-ae58-43f40be34361
+  reason: WaitForFirstConsumer
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: persistentvolume-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:10:56Z"
+  involvedObject:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: cluster-example-1
+    namespace: default
+    resourceVersion: "679"
+    uid: c658b309-4869-46bd-991c-d00baea6e215
+  lastTimestamp: "2024-10-08T08:10:56Z"
+  message: waiting for a volume to be created, either by external provisioner "rancher.io/local-path"
+    or manually created by system administrator
+  metadata:
+    creationTimestamp: "2024-10-08T08:10:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-08T08:10:56Z"
+    name: cluster-example-1.17fc6bf4e03d4578
+    namespace: default
+    resourceVersion: "680"
+    uid: 84730310-fa20-4b2c-8fd7-53ae0eb8f030
+  reason: ExternalProvisioning
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: persistentvolume-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:10:56Z"
+  involvedObject:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: cluster-example-1
+    namespace: default
+    resourceVersion: "679"
+    uid: c658b309-4869-46bd-991c-d00baea6e215
+  lastTimestamp: "2024-10-08T08:10:56Z"
+  message: External provisioner is provisioning volume for claim "default/cluster-example-1"
+  metadata:
+    creationTimestamp: "2024-10-08T08:10:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: local-path-provisioner
+      operation: Update
+      time: "2024-10-08T08:10:56Z"
+    name: cluster-example-1.17fc6bf4e056e681
+    namespace: default
+    resourceVersion: "681"
+    uid: 0d61626c-ea09-4f56-a928-d69596652695
+  reason: Provisioning
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: rancher.io/local-path_local-path-provisioner-6bc4bddd6b-bdffh_b0d80c9a-6f44-492d-aa12-8aaac241bd52
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:10:59Z"
+  involvedObject:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: cluster-example-1
+    namespace: default
+    resourceVersion: "679"
+    uid: c658b309-4869-46bd-991c-d00baea6e215
+  lastTimestamp: "2024-10-08T08:10:59Z"
+  message: Successfully provisioned volume pvc-c658b309-4869-46bd-991c-d00baea6e215
+  metadata:
+    creationTimestamp: "2024-10-08T08:10:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: local-path-provisioner
+      operation: Update
+      time: "2024-10-08T08:10:59Z"
+    name: cluster-example-1.17fc6bf5959e2a1d
+    namespace: default
+    resourceVersion: "699"
+    uid: db7f4116-8f5d-4a1a-85a0-9227f16f63e9
+  reason: ProvisioningSucceeded
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: rancher.io/local-path_local-path-provisioner-6bc4bddd6b-bdffh_b0d80c9a-6f44-492d-aa12-8aaac241bd52
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:31Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cluster-example-1
+    namespace: default
+    resourceVersion: "783"
+    uid: e1e49089-912e-4a12-ac72-a5ec8e20098e
+  lastTimestamp: "2024-10-08T08:11:31Z"
+  message: Successfully assigned default/cluster-example-1 to pg-control-plane
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-08T08:11:31Z"
+    name: cluster-example-1.17fc6bfd14232885
+    namespace: default
+    resourceVersion: "785"
+    uid: 481f40f5-7627-4eda-88e7-10c7d197f453
+  reason: Scheduled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:32Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{bootstrap-controller}
+    kind: Pod
+    name: cluster-example-1
+    namespace: default
+    resourceVersion: "784"
+    uid: e1e49089-912e-4a12-ac72-a5ec8e20098e
+  lastTimestamp: "2024-10-08T08:11:32Z"
+  message: Container image "ghcr.io/cloudnative-pg/cloudnative-pg:1.20.6" already
+    present on machine
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:32Z"
+    name: cluster-example-1.17fc6bfd2b0c56af
+    namespace: default
+    resourceVersion: "789"
+    uid: 19ea2fc1-1eb5-4a5f-b100-bc5268872556
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:32Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{bootstrap-controller}
+    kind: Pod
+    name: cluster-example-1
+    namespace: default
+    resourceVersion: "784"
+    uid: e1e49089-912e-4a12-ac72-a5ec8e20098e
+  lastTimestamp: "2024-10-08T08:11:32Z"
+  message: Created container bootstrap-controller
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:32Z"
+    name: cluster-example-1.17fc6bfd2b7c7405
+    namespace: default
+    resourceVersion: "790"
+    uid: 8d1c3a90-15aa-45ba-97fb-991ef91c9d56
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:32Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{bootstrap-controller}
+    kind: Pod
+    name: cluster-example-1
+    namespace: default
+    resourceVersion: "784"
+    uid: e1e49089-912e-4a12-ac72-a5ec8e20098e
+  lastTimestamp: "2024-10-08T08:11:32Z"
+  message: Started container bootstrap-controller
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:32Z"
+    name: cluster-example-1.17fc6bfd2f34f554
+    namespace: default
+    resourceVersion: "791"
+    uid: a179d3a0-a5b4-4ddd-8f5d-535cde1a7952
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:32Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{postgres}
+    kind: Pod
+    name: cluster-example-1
+    namespace: default
+    resourceVersion: "784"
+    uid: e1e49089-912e-4a12-ac72-a5ec8e20098e
+  lastTimestamp: "2024-10-08T08:11:32Z"
+  message: Container image "ghcr.io/cloudnative-pg/postgresql:16.1" already present
+    on machine
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:32Z"
+    name: cluster-example-1.17fc6bfd47dd8c9a
+    namespace: default
+    resourceVersion: "793"
+    uid: cecfb0fd-0379-4b8d-9ffc-9323eea6363c
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:32Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{postgres}
+    kind: Pod
+    name: cluster-example-1
+    namespace: default
+    resourceVersion: "784"
+    uid: e1e49089-912e-4a12-ac72-a5ec8e20098e
+  lastTimestamp: "2024-10-08T08:11:32Z"
+  message: Created container postgres
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:32Z"
+    name: cluster-example-1.17fc6bfd490c04bb
+    namespace: default
+    resourceVersion: "794"
+    uid: 28790083-e624-421b-8441-dfea9b7c2287
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:32Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{postgres}
+    kind: Pod
+    name: cluster-example-1
+    namespace: default
+    resourceVersion: "784"
+    uid: e1e49089-912e-4a12-ac72-a5ec8e20098e
+  lastTimestamp: "2024-10-08T08:11:32Z"
+  message: Started container postgres
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:32Z"
+    name: cluster-example-1.17fc6bfd4de99457
+    namespace: default
+    resourceVersion: "799"
+    uid: 45876a54-ec72-49dd-b3a3-a784157fd407
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:45Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cluster-example-2-join-626g7
+    namespace: default
+    resourceVersion: "841"
+    uid: 60e3cf00-d288-430a-9555-a5569c975a27
+  lastTimestamp: "2024-10-08T08:11:45Z"
+  message: Successfully assigned default/cluster-example-2-join-626g7 to pg-control-plane
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-08T08:11:45Z"
+    name: cluster-example-2-join-626g7.17fc6c0057595b1d
+    namespace: default
+    resourceVersion: "871"
+    uid: 81b883a9-8b24-4f08-9790-8c7e9bbd66ce
+  reason: Scheduled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:46Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{bootstrap-controller}
+    kind: Pod
+    name: cluster-example-2-join-626g7
+    namespace: default
+    resourceVersion: "870"
+    uid: 60e3cf00-d288-430a-9555-a5569c975a27
+  lastTimestamp: "2024-10-08T08:11:46Z"
+  message: Container image "ghcr.io/cloudnative-pg/cloudnative-pg:1.20.6" already
+    present on machine
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:46Z"
+    name: cluster-example-2-join-626g7.17fc6c006e137726
+    namespace: default
+    resourceVersion: "873"
+    uid: cf32aaa3-8f8b-4eb5-8b8d-681525445201
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:46Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{bootstrap-controller}
+    kind: Pod
+    name: cluster-example-2-join-626g7
+    namespace: default
+    resourceVersion: "870"
+    uid: 60e3cf00-d288-430a-9555-a5569c975a27
+  lastTimestamp: "2024-10-08T08:11:46Z"
+  message: Created container bootstrap-controller
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:46Z"
+    name: cluster-example-2-join-626g7.17fc6c006e7ad276
+    namespace: default
+    resourceVersion: "874"
+    uid: 6a75a0fc-3088-423e-8084-4473f7112155
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:46Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{bootstrap-controller}
+    kind: Pod
+    name: cluster-example-2-join-626g7
+    namespace: default
+    resourceVersion: "870"
+    uid: 60e3cf00-d288-430a-9555-a5569c975a27
+  lastTimestamp: "2024-10-08T08:11:46Z"
+  message: Started container bootstrap-controller
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:46Z"
+    name: cluster-example-2-join-626g7.17fc6c0071d6f8dd
+    namespace: default
+    resourceVersion: "875"
+    uid: a2c1f130-b757-4e4b-800e-373bcaa6194b
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:46Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{join}
+    kind: Pod
+    name: cluster-example-2-join-626g7
+    namespace: default
+    resourceVersion: "870"
+    uid: 60e3cf00-d288-430a-9555-a5569c975a27
+  lastTimestamp: "2024-10-08T08:11:46Z"
+  message: Container image "ghcr.io/cloudnative-pg/postgresql:16.1" already present
+    on machine
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:46Z"
+    name: cluster-example-2-join-626g7.17fc6c008c634c3e
+    namespace: default
+    resourceVersion: "877"
+    uid: 3cb258d3-2064-4d9a-974c-fba941963053
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:46Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{join}
+    kind: Pod
+    name: cluster-example-2-join-626g7
+    namespace: default
+    resourceVersion: "870"
+    uid: 60e3cf00-d288-430a-9555-a5569c975a27
+  lastTimestamp: "2024-10-08T08:11:46Z"
+  message: Created container join
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:46Z"
+    name: cluster-example-2-join-626g7.17fc6c008d33d09d
+    namespace: default
+    resourceVersion: "878"
+    uid: 8c20c094-22b6-49f6-9fe6-65e737ec5087
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:46Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{join}
+    kind: Pod
+    name: cluster-example-2-join-626g7
+    namespace: default
+    resourceVersion: "870"
+    uid: 60e3cf00-d288-430a-9555-a5569c975a27
+  lastTimestamp: "2024-10-08T08:11:46Z"
+  message: Started container join
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:46Z"
+    name: cluster-example-2-join-626g7.17fc6c009285cf59
+    namespace: default
+    resourceVersion: "880"
+    uid: c1cbcb24-3ce0-4dd1-999a-fcae711ee5fc
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:42Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: cluster-example-2-join
+    namespace: default
+    resourceVersion: "839"
+    uid: 45666a3b-b9d7-49c3-a1d9-2bce67ab9e66
+  lastTimestamp: "2024-10-08T08:11:42Z"
+  message: 'Created pod: cluster-example-2-join-626g7'
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:42Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-08T08:11:42Z"
+    name: cluster-example-2-join.17fc6bffa38094a2
+    namespace: default
+    resourceVersion: "844"
+    uid: 1fc14cf0-d548-481e-ae2b-7fb4feb33433
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:51Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: cluster-example-2-join
+    namespace: default
+    resourceVersion: "896"
+    uid: 45666a3b-b9d7-49c3-a1d9-2bce67ab9e66
+  lastTimestamp: "2024-10-08T08:11:51Z"
+  message: Job completed
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-08T08:11:51Z"
+    name: cluster-example-2-join.17fc6c01c091d276
+    namespace: default
+    resourceVersion: "899"
+    uid: 6cf3f0ab-2bc5-4af1-8e20-9a689d3e0bf0
+  reason: Completed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:42Z"
+  involvedObject:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: cluster-example-2
+    namespace: default
+    resourceVersion: "840"
+    uid: 18a3d857-f8e3-4823-be39-f95bd4982071
+  lastTimestamp: "2024-10-08T08:11:42Z"
+  message: waiting for first consumer to be created before binding
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:42Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-08T08:11:42Z"
+    name: cluster-example-2.17fc6bffa35de4e9
+    namespace: default
+    resourceVersion: "842"
+    uid: 47d7eae4-19d8-4f7c-91ad-b76789e0ec21
+  reason: WaitForFirstConsumer
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: persistentvolume-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:42Z"
+  involvedObject:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: cluster-example-2
+    namespace: default
+    resourceVersion: "846"
+    uid: 18a3d857-f8e3-4823-be39-f95bd4982071
+  lastTimestamp: "2024-10-08T08:11:42Z"
+  message: waiting for a volume to be created, either by external provisioner "rancher.io/local-path"
+    or manually created by system administrator
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:42Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-08T08:11:42Z"
+    name: cluster-example-2.17fc6bffa3ecc639
+    namespace: default
+    resourceVersion: "847"
+    uid: 21a7fffd-b3a5-410c-91b4-61f847ce3d4c
+  reason: ExternalProvisioning
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: persistentvolume-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:42Z"
+  involvedObject:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: cluster-example-2
+    namespace: default
+    resourceVersion: "846"
+    uid: 18a3d857-f8e3-4823-be39-f95bd4982071
+  lastTimestamp: "2024-10-08T08:11:42Z"
+  message: External provisioner is provisioning volume for claim "default/cluster-example-2"
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:42Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: local-path-provisioner
+      operation: Update
+      time: "2024-10-08T08:11:42Z"
+    name: cluster-example-2.17fc6bffa412130d
+    namespace: default
+    resourceVersion: "848"
+    uid: c0a1b5a6-1ea8-43d4-8722-c5fc151c6e43
+  reason: Provisioning
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: rancher.io/local-path_local-path-provisioner-6bc4bddd6b-bdffh_b0d80c9a-6f44-492d-aa12-8aaac241bd52
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:44Z"
+  involvedObject:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: cluster-example-2
+    namespace: default
+    resourceVersion: "846"
+    uid: 18a3d857-f8e3-4823-be39-f95bd4982071
+  lastTimestamp: "2024-10-08T08:11:44Z"
+  message: Successfully provisioned volume pvc-18a3d857-f8e3-4823-be39-f95bd4982071
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: local-path-provisioner
+      operation: Update
+      time: "2024-10-08T08:11:44Z"
+    name: cluster-example-2.17fc6c001ccb7dd7
+    namespace: default
+    resourceVersion: "865"
+    uid: b58861ab-5f64-48eb-aad9-b68d33bdb536
+  reason: ProvisioningSucceeded
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: rancher.io/local-path_local-path-provisioner-6bc4bddd6b-bdffh_b0d80c9a-6f44-492d-aa12-8aaac241bd52
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:51Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cluster-example-2
+    namespace: default
+    resourceVersion: "902"
+    uid: 7be2adf1-cfc7-405b-bcd9-f46a57f3838e
+  lastTimestamp: "2024-10-08T08:11:51Z"
+  message: Successfully assigned default/cluster-example-2 to pg-control-plane
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-08T08:11:51Z"
+    name: cluster-example-2.17fc6c01c4514011
+    namespace: default
+    resourceVersion: "904"
+    uid: d431dfaa-4c25-47d3-aa87-cdde88026081
+  reason: Scheduled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{bootstrap-controller}
+    kind: Pod
+    name: cluster-example-2
+    namespace: default
+    resourceVersion: "903"
+    uid: 7be2adf1-cfc7-405b-bcd9-f46a57f3838e
+  lastTimestamp: "2024-10-08T08:11:52Z"
+  message: Container image "ghcr.io/cloudnative-pg/cloudnative-pg:1.20.6" already
+    present on machine
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:52Z"
+    name: cluster-example-2.17fc6c01d9aa4472
+    namespace: default
+    resourceVersion: "908"
+    uid: 26243186-08c2-46b3-ac0c-81cddb9d9711
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{bootstrap-controller}
+    kind: Pod
+    name: cluster-example-2
+    namespace: default
+    resourceVersion: "903"
+    uid: 7be2adf1-cfc7-405b-bcd9-f46a57f3838e
+  lastTimestamp: "2024-10-08T08:11:52Z"
+  message: Created container bootstrap-controller
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:52Z"
+    name: cluster-example-2.17fc6c01da0be59c
+    namespace: default
+    resourceVersion: "909"
+    uid: 37fe6b6e-d214-48c9-bd30-053466ae9384
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{bootstrap-controller}
+    kind: Pod
+    name: cluster-example-2
+    namespace: default
+    resourceVersion: "903"
+    uid: 7be2adf1-cfc7-405b-bcd9-f46a57f3838e
+  lastTimestamp: "2024-10-08T08:11:52Z"
+  message: Started container bootstrap-controller
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:52Z"
+    name: cluster-example-2.17fc6c01dd92347f
+    namespace: default
+    resourceVersion: "910"
+    uid: 0e5d9c27-db55-47c6-9fe5-73137eb3dee3
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{postgres}
+    kind: Pod
+    name: cluster-example-2
+    namespace: default
+    resourceVersion: "903"
+    uid: 7be2adf1-cfc7-405b-bcd9-f46a57f3838e
+  lastTimestamp: "2024-10-08T08:11:52Z"
+  message: Container image "ghcr.io/cloudnative-pg/postgresql:16.1" already present
+    on machine
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:52Z"
+    name: cluster-example-2.17fc6c01f43a4ce1
+    namespace: default
+    resourceVersion: "913"
+    uid: a02b8b63-b59d-4fd7-8fd9-a0973529f4b4
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{postgres}
+    kind: Pod
+    name: cluster-example-2
+    namespace: default
+    resourceVersion: "903"
+    uid: 7be2adf1-cfc7-405b-bcd9-f46a57f3838e
+  lastTimestamp: "2024-10-08T08:11:52Z"
+  message: Created container postgres
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:52Z"
+    name: cluster-example-2.17fc6c01f4ec64d6
+    namespace: default
+    resourceVersion: "915"
+    uid: a8d304ba-e985-4b61-bb4d-944ebf3e4deb
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{postgres}
+    kind: Pod
+    name: cluster-example-2
+    namespace: default
+    resourceVersion: "903"
+    uid: 7be2adf1-cfc7-405b-bcd9-f46a57f3838e
+  lastTimestamp: "2024-10-08T08:11:52Z"
+  message: Started container postgres
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:11:52Z"
+    name: cluster-example-2.17fc6c01f9f3a18d
+    namespace: default
+    resourceVersion: "918"
+    uid: a79f1340-d441-470e-916f-09049e6ac201
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:12:02Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cluster-example-3-join-87cfl
+    namespace: default
+    resourceVersion: "959"
+    uid: 7fb40037-a92f-402e-891a-84bcca20a9e9
+  lastTimestamp: "2024-10-08T08:12:02Z"
+  message: '0/1 nodes are available: persistentvolumeclaim "cluster-example-3" not
+    found. preemption: 0/1 nodes are available: 1 No preemption victims found for
+    incoming pod..'
+  metadata:
+    creationTimestamp: "2024-10-08T08:12:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-08T08:12:02Z"
+    name: cluster-example-3-join-87cfl.17fc6c0452688cfc
+    namespace: default
+    resourceVersion: "964"
+    uid: 953dcc4d-60be-4ac7-9897-bbd66777abc7
+  reason: FailedScheduling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Warning
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:12:08Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cluster-example-3-join-87cfl
+    namespace: default
+    resourceVersion: "963"
+    uid: 7fb40037-a92f-402e-891a-84bcca20a9e9
+  lastTimestamp: "2024-10-08T08:12:08Z"
+  message: Successfully assigned default/cluster-example-3-join-87cfl to pg-control-plane
+  metadata:
+    creationTimestamp: "2024-10-08T08:12:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-08T08:12:08Z"
+    name: cluster-example-3-join-87cfl.17fc6c05aeb04075
+    namespace: default
+    resourceVersion: "998"
+    uid: 6b7a75d5-97c0-45e1-b912-e7de403d18bf
+  reason: Scheduled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:12:09Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{bootstrap-controller}
+    kind: Pod
+    name: cluster-example-3-join-87cfl
+    namespace: default
+    resourceVersion: "997"
+    uid: 7fb40037-a92f-402e-891a-84bcca20a9e9
+  lastTimestamp: "2024-10-08T08:12:09Z"
+  message: Container image "ghcr.io/cloudnative-pg/cloudnative-pg:1.20.6" already
+    present on machine
+  metadata:
+    creationTimestamp: "2024-10-08T08:12:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:12:09Z"
+    name: cluster-example-3-join-87cfl.17fc6c05c79bf683
+    namespace: default
+    resourceVersion: "1000"
+    uid: eb114394-245b-4800-ac67-bd6599ba3290
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:12:09Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{bootstrap-controller}
+    kind: Pod
+    name: cluster-example-3-join-87cfl
+    namespace: default
+    resourceVersion: "997"
+    uid: 7fb40037-a92f-402e-891a-84bcca20a9e9
+  lastTimestamp: "2024-10-08T08:12:09Z"
+  message: Created container bootstrap-controller
+  metadata:
+    creationTimestamp: "2024-10-08T08:12:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:12:09Z"
+    name: cluster-example-3-join-87cfl.17fc6c05c7f6251a
+    namespace: default
+    resourceVersion: "1001"
+    uid: c192a72b-568e-45b8-a576-dce9e6fc9d33
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:12:09Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{bootstrap-controller}
+    kind: Pod
+    name: cluster-example-3-join-87cfl
+    namespace: default
+    resourceVersion: "997"
+    uid: 7fb40037-a92f-402e-891a-84bcca20a9e9
+  lastTimestamp: "2024-10-08T08:12:09Z"
+  message: Started container bootstrap-controller
+  metadata:
+    creationTimestamp: "2024-10-08T08:12:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:12:09Z"
+    name: cluster-example-3-join-87cfl.17fc6c05cba2c9f4
+    namespace: default
+    resourceVersion: "1002"
+    uid: 060d329a-d117-4697-ae6b-eb562e9c2dbd
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:12:09Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{join}
+    kind: Pod
+    name: cluster-example-3-join-87cfl
+    namespace: default
+    resourceVersion: "997"
+    uid: 7fb40037-a92f-402e-891a-84bcca20a9e9
+  lastTimestamp: "2024-10-08T08:12:09Z"
+  message: Container image "ghcr.io/cloudnative-pg/postgresql:16.1" already present
+    on machine
+  metadata:
+    creationTimestamp: "2024-10-08T08:12:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:12:09Z"
+    name: cluster-example-3-join-87cfl.17fc6c05ed640564
+    namespace: default
+    resourceVersion: "1005"
+    uid: 62516d54-1ac5-4156-9e9a-e83f1882e9f7
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:12:09Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{join}
+    kind: Pod
+    name: cluster-example-3-join-87cfl
+    namespace: default
+    resourceVersion: "997"
+    uid: 7fb40037-a92f-402e-891a-84bcca20a9e9
+  lastTimestamp: "2024-10-08T08:12:09Z"
+  message: Created container join
+  metadata:
+    creationTimestamp: "2024-10-08T08:12:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:12:09Z"
+    name: cluster-example-3-join-87cfl.17fc6c05ede3d6be
+    namespace: default
+    resourceVersion: "1007"
+    uid: 43cfdb85-01a7-4072-83d0-662303ad6d86
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:12:09Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{join}
+    kind: Pod
+    name: cluster-example-3-join-87cfl
+    namespace: default
+    resourceVersion: "997"
+    uid: 7fb40037-a92f-402e-891a-84bcca20a9e9
+  lastTimestamp: "2024-10-08T08:12:09Z"
+  message: Started container join
+  metadata:
+    creationTimestamp: "2024-10-08T08:12:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:12:09Z"
+    name: cluster-example-3-join-87cfl.17fc6c05f19f0bc9
+    namespace: default
+    resourceVersion: "1008"
+    uid: c62b518a-f103-42da-a63d-a04d483bbeea
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:12:02Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: cluster-example-3-join
+    namespace: default
+    resourceVersion: "957"
+    uid: db2a5f22-390b-45fc-bb07-c014de983ddc
+  lastTimestamp: "2024-10-08T08:12:02Z"
+  message: 'Created pod: cluster-example-3-join-87cfl'
+  metadata:
+    creationTimestamp: "2024-10-08T08:12:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-08T08:12:02Z"
+    name: cluster-example-3-join.17fc6c0452309776
+    namespace: default
+    resourceVersion: "961"
+    uid: d9b68faf-e7af-4d23-b842-1c75e9b87ac5
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:12:12Z"
+  involvedObject:
+    apiVersion: batch/v1
+    kind: Job
+    name: cluster-example-3-join
+    namespace: default
+    resourceVersion: "1017"
+    uid: db2a5f22-390b-45fc-bb07-c014de983ddc
+  lastTimestamp: "2024-10-08T08:12:12Z"
+  message: Job completed
+  metadata:
+    creationTimestamp: "2024-10-08T08:12:12Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-08T08:12:12Z"
+    name: cluster-example-3-join.17fc6c06a9763aec
+    namespace: default
+    resourceVersion: "1020"
+    uid: 0f682453-4f56-4f78-a425-1d34ce3d5a15
+  reason: Completed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: job-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:12:02Z"
+  involvedObject:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: cluster-example-3
+    namespace: default
+    resourceVersion: "958"
+    uid: 1299252c-e001-4fae-8866-54e9b5c20aa0
+  lastTimestamp: "2024-10-08T08:12:02Z"
+  message: waiting for first consumer to be created before binding
+  metadata:
+    creationTimestamp: "2024-10-08T08:12:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-08T08:12:02Z"
+    name: cluster-example-3.17fc6c0452223f19
+    namespace: default
+    resourceVersion: "960"
+    uid: bc0b1023-973c-47cb-a923-ee0526471a0e
+  reason: WaitForFirstConsumer
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: persistentvolume-controller
+  type: Normal
+- count: 2
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:12:04Z"
+  involvedObject:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: cluster-example-3
+    namespace: default
+    resourceVersion: "970"
+    uid: 1299252c-e001-4fae-8866-54e9b5c20aa0
+  lastTimestamp: "2024-10-08T08:12:07Z"
+  message: waiting for a volume to be created, either by external provisioner "rancher.io/local-path"
+    or manually created by system administrator
+  metadata:
+    creationTimestamp: "2024-10-08T08:12:04Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-08T08:12:07Z"
+    name: cluster-example-3.17fc6c04c09a6b39
+    namespace: default
+    resourceVersion: "984"
+    uid: 2ef304d0-748c-4535-adf2-856f67c624ec
+  reason: ExternalProvisioning
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: persistentvolume-controller
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:12:04Z"
+  involvedObject:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: cluster-example-3
+    namespace: default
+    resourceVersion: "970"
+    uid: 1299252c-e001-4fae-8866-54e9b5c20aa0
+  lastTimestamp: "2024-10-08T08:12:04Z"
+  message: External provisioner is provisioning volume for claim "default/cluster-example-3"
+  metadata:
+    creationTimestamp: "2024-10-08T08:12:04Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: local-path-provisioner
+      operation: Update
+      time: "2024-10-08T08:12:04Z"
+    name: cluster-example-3.17fc6c04c0c2c90c
+    namespace: default
+    resourceVersion: "973"
+    uid: 8d66f3ec-26cb-460b-82e8-90202b42ec3d
+  reason: Provisioning
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: rancher.io/local-path_local-path-provisioner-6bc4bddd6b-bdffh_b0d80c9a-6f44-492d-aa12-8aaac241bd52
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:12:07Z"
+  involvedObject:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: cluster-example-3
+    namespace: default
+    resourceVersion: "970"
+    uid: 1299252c-e001-4fae-8866-54e9b5c20aa0
+  lastTimestamp: "2024-10-08T08:12:07Z"
+  message: Successfully provisioned volume pvc-1299252c-e001-4fae-8866-54e9b5c20aa0
+  metadata:
+    creationTimestamp: "2024-10-08T08:12:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: local-path-provisioner
+      operation: Update
+      time: "2024-10-08T08:12:07Z"
+    name: cluster-example-3.17fc6c0577a2ac13
+    namespace: default
+    resourceVersion: "993"
+    uid: 7576f260-39a7-4e11-a4c1-b301027d2c68
+  reason: ProvisioningSucceeded
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: rancher.io/local-path_local-path-provisioner-6bc4bddd6b-bdffh_b0d80c9a-6f44-492d-aa12-8aaac241bd52
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:12:12Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cluster-example-3
+    namespace: default
+    resourceVersion: "1023"
+    uid: 0a1af0c7-14b5-460d-9c4c-25c173529035
+  lastTimestamp: "2024-10-08T08:12:12Z"
+  message: Successfully assigned default/cluster-example-3 to pg-control-plane
+  metadata:
+    creationTimestamp: "2024-10-08T08:12:12Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-08T08:12:12Z"
+    name: cluster-example-3.17fc6c06af4e10d7
+    namespace: default
+    resourceVersion: "1025"
+    uid: 1c25859a-e233-485a-83ef-c338bfa8c92d
+  reason: Scheduled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: default-scheduler
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:12:13Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{bootstrap-controller}
+    kind: Pod
+    name: cluster-example-3
+    namespace: default
+    resourceVersion: "1024"
+    uid: 0a1af0c7-14b5-460d-9c4c-25c173529035
+  lastTimestamp: "2024-10-08T08:12:13Z"
+  message: Container image "ghcr.io/cloudnative-pg/cloudnative-pg:1.20.6" already
+    present on machine
+  metadata:
+    creationTimestamp: "2024-10-08T08:12:13Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:12:13Z"
+    name: cluster-example-3.17fc6c06c4e6ab98
+    namespace: default
+    resourceVersion: "1029"
+    uid: 9757c634-8b93-436a-b208-9f702da441ac
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:12:13Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{bootstrap-controller}
+    kind: Pod
+    name: cluster-example-3
+    namespace: default
+    resourceVersion: "1024"
+    uid: 0a1af0c7-14b5-460d-9c4c-25c173529035
+  lastTimestamp: "2024-10-08T08:12:13Z"
+  message: Created container bootstrap-controller
+  metadata:
+    creationTimestamp: "2024-10-08T08:12:13Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:12:13Z"
+    name: cluster-example-3.17fc6c06c54e2ef1
+    namespace: default
+    resourceVersion: "1030"
+    uid: 35736af6-10f7-4e37-b4ff-9db8a7a631e0
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:12:13Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{bootstrap-controller}
+    kind: Pod
+    name: cluster-example-3
+    namespace: default
+    resourceVersion: "1024"
+    uid: 0a1af0c7-14b5-460d-9c4c-25c173529035
+  lastTimestamp: "2024-10-08T08:12:13Z"
+  message: Started container bootstrap-controller
+  metadata:
+    creationTimestamp: "2024-10-08T08:12:13Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:12:13Z"
+    name: cluster-example-3.17fc6c06c895291a
+    namespace: default
+    resourceVersion: "1031"
+    uid: 46b1e12b-9d15-48ab-82d7-075298fb1454
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:12:13Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{postgres}
+    kind: Pod
+    name: cluster-example-3
+    namespace: default
+    resourceVersion: "1024"
+    uid: 0a1af0c7-14b5-460d-9c4c-25c173529035
+  lastTimestamp: "2024-10-08T08:12:13Z"
+  message: Container image "ghcr.io/cloudnative-pg/postgresql:16.1" already present
+    on machine
+  metadata:
+    creationTimestamp: "2024-10-08T08:12:13Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:12:13Z"
+    name: cluster-example-3.17fc6c06dcdd1a25
+    namespace: default
+    resourceVersion: "1033"
+    uid: 67f2c9f9-1c68-4b53-8420-626a17163fc9
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:12:13Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{postgres}
+    kind: Pod
+    name: cluster-example-3
+    namespace: default
+    resourceVersion: "1024"
+    uid: 0a1af0c7-14b5-460d-9c4c-25c173529035
+  lastTimestamp: "2024-10-08T08:12:13Z"
+  message: Created container postgres
+  metadata:
+    creationTimestamp: "2024-10-08T08:12:13Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:12:13Z"
+    name: cluster-example-3.17fc6c06de3f991f
+    namespace: default
+    resourceVersion: "1036"
+    uid: 930a9bed-11cf-4452-b746-7bfca0f73f16
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:12:13Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{postgres}
+    kind: Pod
+    name: cluster-example-3
+    namespace: default
+    resourceVersion: "1024"
+    uid: 0a1af0c7-14b5-460d-9c4c-25c173529035
+  lastTimestamp: "2024-10-08T08:12:13Z"
+  message: Started container postgres
+  metadata:
+    creationTimestamp: "2024-10-08T08:12:13Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:12:13Z"
+    name: cluster-example-3.17fc6c06e30baf6c
+    namespace: default
+    resourceVersion: "1039"
+    uid: aa47de34-fd32-494a-a484-8ee86fff44b2
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 2
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:10:56Z"
+  involvedObject:
+    apiVersion: policy/v1
+    kind: PodDisruptionBudget
+    name: cluster-example-primary
+    namespace: default
+    resourceVersion: "648"
+    uid: fc951878-bc2e-4c37-baa2-2e36d26050ca
+  lastTimestamp: "2024-10-08T08:10:56Z"
+  message: No matching pods found
+  metadata:
+    creationTimestamp: "2024-10-08T08:10:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-08T08:10:56Z"
+    name: cluster-example-primary.17fc6bf4d2d49226
+    namespace: default
+    resourceVersion: "661"
+    uid: 1b3da3b0-66f0-43b8-a38f-4a58b5c5a538
+  reason: NoPods
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: controllermanager
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:10:56Z"
+  involvedObject:
+    apiVersion: postgresql.cnpg.io/v1
+    kind: Cluster
+    name: cluster-example
+    namespace: default
+    resourceVersion: "631"
+    uid: 8401e567-5851-4cc0-84cd-f94c333d7e3a
+  lastTimestamp: "2024-10-08T08:10:56Z"
+  message: Creating PodDisruptionBudget cluster-example-primary
+  metadata:
+    creationTimestamp: "2024-10-08T08:10:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: manager
+      operation: Update
+      time: "2024-10-08T08:10:56Z"
+    name: cluster-example.17fc6bf4d285dac8
+    namespace: default
+    resourceVersion: "652"
+    uid: 75d3a59f-b03d-4bc3-ba5c-b087531f050d
+  reason: CreatingPodDisruptionBudget
+  reportingComponent: cloudnative-pg
+  reportingInstance: ""
+  source:
+    component: cloudnative-pg
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:10:56Z"
+  involvedObject:
+    apiVersion: postgresql.cnpg.io/v1
+    kind: Cluster
+    name: cluster-example
+    namespace: default
+    resourceVersion: "631"
+    uid: 8401e567-5851-4cc0-84cd-f94c333d7e3a
+  lastTimestamp: "2024-10-08T08:10:56Z"
+  message: Creating PodDisruptionBudget cluster-example
+  metadata:
+    creationTimestamp: "2024-10-08T08:10:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: manager
+      operation: Update
+      time: "2024-10-08T08:10:56Z"
+    name: cluster-example.17fc6bf4d2ace6e0
+    namespace: default
+    resourceVersion: "654"
+    uid: a26043aa-c0d3-4368-ac98-783fe4984e4b
+  reason: CreatingPodDisruptionBudget
+  reportingComponent: cloudnative-pg
+  reportingInstance: ""
+  source:
+    component: cloudnative-pg
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:10:56Z"
+  involvedObject:
+    apiVersion: postgresql.cnpg.io/v1
+    kind: Cluster
+    name: cluster-example
+    namespace: default
+    resourceVersion: "631"
+    uid: 8401e567-5851-4cc0-84cd-f94c333d7e3a
+  lastTimestamp: "2024-10-08T08:10:56Z"
+  message: Creating ServiceAccount
+  metadata:
+    creationTimestamp: "2024-10-08T08:10:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: manager
+      operation: Update
+      time: "2024-10-08T08:10:56Z"
+    name: cluster-example.17fc6bf4d312fdf7
+    namespace: default
+    resourceVersion: "657"
+    uid: bb92d1a2-5d3a-4254-b88a-fde1d5bc55cb
+  reason: CreatingServiceAccount
+  reportingComponent: cloudnative-pg
+  reportingInstance: ""
+  source:
+    component: cloudnative-pg
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:10:56Z"
+  involvedObject:
+    apiVersion: postgresql.cnpg.io/v1
+    kind: Cluster
+    name: cluster-example
+    namespace: default
+    resourceVersion: "631"
+    uid: 8401e567-5851-4cc0-84cd-f94c333d7e3a
+  lastTimestamp: "2024-10-08T08:10:56Z"
+  message: Creating Cluster Role
+  metadata:
+    creationTimestamp: "2024-10-08T08:10:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: manager
+      operation: Update
+      time: "2024-10-08T08:10:56Z"
+    name: cluster-example.17fc6bf4d38301e9
+    namespace: default
+    resourceVersion: "659"
+    uid: e2f51826-a3bc-4afd-83b1-c1d3b1276d69
+  reason: CreatingRole
+  reportingComponent: cloudnative-pg
+  reportingInstance: ""
+  source:
+    component: cloudnative-pg
+  type: Normal
+- count: 2
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:10:56Z"
+  involvedObject:
+    apiVersion: policy/v1
+    kind: PodDisruptionBudget
+    name: cluster-example
+    namespace: default
+    resourceVersion: "650"
+    uid: 98d6bc35-8bd9-4a73-80c9-3a0fc6dc6c86
+  lastTimestamp: "2024-10-08T08:10:56Z"
+  message: No matching pods found
+  metadata:
+    creationTimestamp: "2024-10-08T08:10:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-08T08:10:56Z"
+    name: cluster-example.17fc6bf4d3aa8525
+    namespace: default
+    resourceVersion: "663"
+    uid: cb3b8d14-eb8d-46f7-9d9d-3a34179c73be
+  reason: NoPods
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: controllermanager
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:10:56Z"
+  involvedObject:
+    apiVersion: postgresql.cnpg.io/v1
+    kind: Cluster
+    name: cluster-example
+    namespace: default
+    resourceVersion: "668"
+    uid: 8401e567-5851-4cc0-84cd-f94c333d7e3a
+  lastTimestamp: "2024-10-08T08:10:56Z"
+  message: Primary instance (initdb)
+  metadata:
+    creationTimestamp: "2024-10-08T08:10:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: manager
+      operation: Update
+      time: "2024-10-08T08:10:56Z"
+    name: cluster-example.17fc6bf4ded2a0e1
+    namespace: default
+    resourceVersion: "670"
+    uid: b4945d1a-daf8-4b43-8ca6-f7a7b8d53bae
+  reason: CreatingInstance
+  reportingComponent: cloudnative-pg
+  reportingInstance: ""
+  source:
+    component: cloudnative-pg
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:11:42Z"
+  involvedObject:
+    apiVersion: postgresql.cnpg.io/v1
+    kind: Cluster
+    name: cluster-example
+    namespace: default
+    resourceVersion: "836"
+    uid: 8401e567-5851-4cc0-84cd-f94c333d7e3a
+  lastTimestamp: "2024-10-08T08:11:42Z"
+  message: Creating instance cluster-example-2
+  metadata:
+    creationTimestamp: "2024-10-08T08:11:42Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: manager
+      operation: Update
+      time: "2024-10-08T08:11:42Z"
+    name: cluster-example.17fc6bffa2ed3806
+    namespace: default
+    resourceVersion: "838"
+    uid: afb57ae5-4464-4203-a4d4-86b47011d8b1
+  reason: CreatingInstance
+  reportingComponent: cloudnative-pg
+  reportingInstance: ""
+  source:
+    component: cloudnative-pg
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:12:02Z"
+  involvedObject:
+    apiVersion: postgresql.cnpg.io/v1
+    kind: Cluster
+    name: cluster-example
+    namespace: default
+    resourceVersion: "954"
+    uid: 8401e567-5851-4cc0-84cd-f94c333d7e3a
+  lastTimestamp: "2024-10-08T08:12:02Z"
+  message: Creating instance cluster-example-3
+  metadata:
+    creationTimestamp: "2024-10-08T08:12:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: manager
+      operation: Update
+      time: "2024-10-08T08:12:02Z"
+    name: cluster-example.17fc6c04518d124c
+    namespace: default
+    resourceVersion: "956"
+    uid: d93b2177-27c3-4943-9848-15bf5ced87dd
+  reason: CreatingInstance
+  reportingComponent: cloudnative-pg
+  reportingInstance: ""
+  source:
+    component: cloudnative-pg
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:09:24Z"
+  involvedObject:
+    kind: Node
+    name: pg-control-plane
+    uid: pg-control-plane
+  lastTimestamp: "2024-10-08T08:09:24Z"
+  message: Starting kubelet.
+  metadata:
+    creationTimestamp: "2024-10-08T08:09:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:09:24Z"
+    name: pg-control-plane.17fc6bdf5db48846
+    namespace: default
+    resourceVersion: "226"
+    uid: 96cf84d4-f605-42c4-b962-6b0969b34eac
+  reason: Starting
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:09:24Z"
+  involvedObject:
+    kind: Node
+    name: pg-control-plane
+    uid: pg-control-plane
+  lastTimestamp: "2024-10-08T08:09:24Z"
+  message: Updated Node Allocatable limit across pods
+  metadata:
+    creationTimestamp: "2024-10-08T08:09:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:09:24Z"
+    name: pg-control-plane.17fc6bdf60f94390
+    namespace: default
+    resourceVersion: "229"
+    uid: da667d2f-0b7a-4c30-8043-47eeeaf6e481
+  reason: NodeAllocatableEnforced
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:09:24Z"
+  involvedObject:
+    kind: Node
+    name: pg-control-plane
+    uid: pg-control-plane
+  lastTimestamp: "2024-10-08T08:09:24Z"
+  message: 'Node pg-control-plane status is now: NodeHasSufficientMemory'
+  metadata:
+    creationTimestamp: "2024-10-08T08:09:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:09:24Z"
+    name: pg-control-plane.17fc6bdf66f9f37d
+    namespace: default
+    resourceVersion: "232"
+    uid: c905efe0-5db7-457b-93c6-485a4d1bac57
+  reason: NodeHasSufficientMemory
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:09:24Z"
+  involvedObject:
+    kind: Node
+    name: pg-control-plane
+    uid: pg-control-plane
+  lastTimestamp: "2024-10-08T08:09:24Z"
+  message: 'Node pg-control-plane status is now: NodeHasNoDiskPressure'
+  metadata:
+    creationTimestamp: "2024-10-08T08:09:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:09:24Z"
+    name: pg-control-plane.17fc6bdf66f9fbca
+    namespace: default
+    resourceVersion: "233"
+    uid: 51c6928b-7c0d-4db1-85db-014bb81264d4
+  reason: NodeHasNoDiskPressure
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:09:24Z"
+  involvedObject:
+    kind: Node
+    name: pg-control-plane
+    uid: pg-control-plane
+  lastTimestamp: "2024-10-08T08:09:24Z"
+  message: 'Node pg-control-plane status is now: NodeHasSufficientPID'
+  metadata:
+    creationTimestamp: "2024-10-08T08:09:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:09:24Z"
+    name: pg-control-plane.17fc6bdf66fa0223
+    namespace: default
+    resourceVersion: "234"
+    uid: 99fa6026-f076-4bf6-9fd4-7ac94c277f73
+  reason: NodeHasSufficientPID
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:09:37Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Node
+    name: pg-control-plane
+    uid: 8903b59a-045d-4f6a-b68c-2ecca06fff1a
+  lastTimestamp: "2024-10-08T08:09:37Z"
+  message: 'Node pg-control-plane event: Registered Node pg-control-plane in Controller'
+  metadata:
+    creationTimestamp: "2024-10-08T08:09:37Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-08T08:09:37Z"
+    name: pg-control-plane.17fc6be26cad010a
+    namespace: default
+    resourceVersion: "321"
+    uid: 9619a300-79df-4a3c-8797-190622d6d2e6
+  reason: RegisteredNode
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: node-controller
+  type: Normal
+- action: StartKubeProxy
+  eventTime: "2024-10-08T08:09:38.895005Z"
+  firstTimestamp: null
+  involvedObject:
+    kind: Node
+    name: pg-control-plane
+    uid: pg-control-plane
+  lastTimestamp: null
+  metadata:
+    creationTimestamp: "2024-10-08T08:09:38Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-proxy
+      operation: Update
+      time: "2024-10-08T08:09:38Z"
+    name: pg-control-plane.17fc6be2cfb5c814
+    namespace: default
+    resourceVersion: "394"
+    uid: c6846809-b75a-476c-a3da-4ebf5f9ebf2a
+  reason: Starting
+  reportingComponent: kube-proxy
+  reportingInstance: kube-proxy-pg-control-plane
+  source: {}
+  type: Normal
+- count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-08T08:09:39Z"
+  involvedObject:
+    kind: Node
+    name: pg-control-plane
+    uid: pg-control-plane
+  lastTimestamp: "2024-10-08T08:09:39Z"
+  message: 'Node pg-control-plane status is now: NodeReady'
+  metadata:
+    creationTimestamp: "2024-10-08T08:09:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-08T08:09:39Z"
+    name: pg-control-plane.17fc6be2f8821380
+    namespace: default
+    resourceVersion: "401"
+    uid: 5e93fe0f-b79c-4ce6-805c-6dccbcfad567
+  reason: NodeReady
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: pg-control-plane
+  type: Normal
+metadata:
+  resourceVersion: "4277"

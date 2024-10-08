@@ -1,0 +1,333 @@
+items:
+- metadata:
+    annotations:
+      cnpg.io/nodeSerial: "1"
+      cnpg.io/operatorVersion: 1.20.6
+      cnpg.io/pvcStatus: ready
+      pv.kubernetes.io/bind-completed: "yes"
+      pv.kubernetes.io/bound-by-controller: "yes"
+      volume.beta.kubernetes.io/storage-provisioner: rancher.io/local-path
+      volume.kubernetes.io/selected-node: pg-control-plane
+      volume.kubernetes.io/storage-provisioner: rancher.io/local-path
+    creationTimestamp: "2024-10-08T08:10:56Z"
+    finalizers:
+    - kubernetes.io/pvc-protection
+    labels:
+      cnpg.io/cluster: cluster-example
+      cnpg.io/instanceName: cluster-example-1
+      cnpg.io/instanceRole: primary
+      cnpg.io/pvcRole: PG_DATA
+      role: primary
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:volume.kubernetes.io/selected-node: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-08T08:10:56Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:pv.kubernetes.io/bind-completed: {}
+            f:pv.kubernetes.io/bound-by-controller: {}
+            f:volume.beta.kubernetes.io/storage-provisioner: {}
+            f:volume.kubernetes.io/storage-provisioner: {}
+        f:spec:
+          f:volumeName: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-08T08:10:59Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:accessModes: {}
+          f:capacity:
+            .: {}
+            f:storage: {}
+          f:phase: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2024-10-08T08:10:59Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:cnpg.io/nodeSerial: {}
+            f:cnpg.io/operatorVersion: {}
+            f:cnpg.io/pvcStatus: {}
+          f:labels:
+            .: {}
+            f:cnpg.io/cluster: {}
+            f:cnpg.io/instanceName: {}
+            f:cnpg.io/instanceRole: {}
+            f:cnpg.io/pvcRole: {}
+            f:role: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"8401e567-5851-4cc0-84cd-f94c333d7e3a"}: {}
+        f:spec:
+          f:accessModes: {}
+          f:resources:
+            f:requests:
+              .: {}
+              f:storage: {}
+          f:volumeMode: {}
+      manager: manager
+      operation: Update
+      time: "2024-10-08T08:11:42Z"
+    name: cluster-example-1
+    namespace: default
+    ownerReferences:
+    - apiVersion: postgresql.cnpg.io/v1
+      controller: true
+      kind: Cluster
+      name: cluster-example
+      uid: 8401e567-5851-4cc0-84cd-f94c333d7e3a
+    resourceVersion: "835"
+    uid: c658b309-4869-46bd-991c-d00baea6e215
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 1Gi
+    storageClassName: standard
+    volumeMode: Filesystem
+    volumeName: pvc-c658b309-4869-46bd-991c-d00baea6e215
+  status:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 1Gi
+    phase: Bound
+- metadata:
+    annotations:
+      cnpg.io/nodeSerial: "2"
+      cnpg.io/operatorVersion: 1.20.6
+      cnpg.io/pvcStatus: ready
+      pv.kubernetes.io/bind-completed: "yes"
+      pv.kubernetes.io/bound-by-controller: "yes"
+      volume.beta.kubernetes.io/storage-provisioner: rancher.io/local-path
+      volume.kubernetes.io/selected-node: pg-control-plane
+      volume.kubernetes.io/storage-provisioner: rancher.io/local-path
+    creationTimestamp: "2024-10-08T08:11:42Z"
+    finalizers:
+    - kubernetes.io/pvc-protection
+    labels:
+      cnpg.io/cluster: cluster-example
+      cnpg.io/instanceName: cluster-example-2
+      cnpg.io/instanceRole: replica
+      cnpg.io/pvcRole: PG_DATA
+      role: replica
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:volume.kubernetes.io/selected-node: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-08T08:11:42Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:pv.kubernetes.io/bind-completed: {}
+            f:pv.kubernetes.io/bound-by-controller: {}
+            f:volume.beta.kubernetes.io/storage-provisioner: {}
+            f:volume.kubernetes.io/storage-provisioner: {}
+        f:spec:
+          f:volumeName: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-08T08:11:44Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:accessModes: {}
+          f:capacity:
+            .: {}
+            f:storage: {}
+          f:phase: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2024-10-08T08:11:44Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:cnpg.io/nodeSerial: {}
+            f:cnpg.io/operatorVersion: {}
+            f:cnpg.io/pvcStatus: {}
+          f:labels:
+            .: {}
+            f:cnpg.io/cluster: {}
+            f:cnpg.io/instanceName: {}
+            f:cnpg.io/instanceRole: {}
+            f:cnpg.io/pvcRole: {}
+            f:role: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"8401e567-5851-4cc0-84cd-f94c333d7e3a"}: {}
+        f:spec:
+          f:accessModes: {}
+          f:resources:
+            f:requests:
+              .: {}
+              f:storage: {}
+          f:volumeMode: {}
+      manager: manager
+      operation: Update
+      time: "2024-10-08T08:11:53Z"
+    name: cluster-example-2
+    namespace: default
+    ownerReferences:
+    - apiVersion: postgresql.cnpg.io/v1
+      controller: true
+      kind: Cluster
+      name: cluster-example
+      uid: 8401e567-5851-4cc0-84cd-f94c333d7e3a
+    resourceVersion: "928"
+    uid: 18a3d857-f8e3-4823-be39-f95bd4982071
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 1Gi
+    storageClassName: standard
+    volumeMode: Filesystem
+    volumeName: pvc-18a3d857-f8e3-4823-be39-f95bd4982071
+  status:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 1Gi
+    phase: Bound
+- metadata:
+    annotations:
+      cnpg.io/nodeSerial: "3"
+      cnpg.io/operatorVersion: 1.20.6
+      cnpg.io/pvcStatus: ready
+      pv.kubernetes.io/bind-completed: "yes"
+      pv.kubernetes.io/bound-by-controller: "yes"
+      volume.beta.kubernetes.io/storage-provisioner: rancher.io/local-path
+      volume.kubernetes.io/selected-node: pg-control-plane
+      volume.kubernetes.io/storage-provisioner: rancher.io/local-path
+    creationTimestamp: "2024-10-08T08:12:02Z"
+    finalizers:
+    - kubernetes.io/pvc-protection
+    labels:
+      cnpg.io/cluster: cluster-example
+      cnpg.io/instanceName: cluster-example-3
+      cnpg.io/instanceRole: replica
+      cnpg.io/pvcRole: PG_DATA
+      role: replica
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:volume.kubernetes.io/selected-node: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-08T08:12:04Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:pv.kubernetes.io/bind-completed: {}
+            f:pv.kubernetes.io/bound-by-controller: {}
+            f:volume.beta.kubernetes.io/storage-provisioner: {}
+            f:volume.kubernetes.io/storage-provisioner: {}
+        f:spec:
+          f:volumeName: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-08T08:12:07Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:accessModes: {}
+          f:capacity:
+            .: {}
+            f:storage: {}
+          f:phase: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2024-10-08T08:12:07Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:cnpg.io/nodeSerial: {}
+            f:cnpg.io/operatorVersion: {}
+            f:cnpg.io/pvcStatus: {}
+          f:labels:
+            .: {}
+            f:cnpg.io/cluster: {}
+            f:cnpg.io/instanceName: {}
+            f:cnpg.io/instanceRole: {}
+            f:cnpg.io/pvcRole: {}
+            f:role: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"8401e567-5851-4cc0-84cd-f94c333d7e3a"}: {}
+        f:spec:
+          f:accessModes: {}
+          f:resources:
+            f:requests:
+              .: {}
+              f:storage: {}
+          f:volumeMode: {}
+      manager: manager
+      operation: Update
+      time: "2024-10-08T08:12:14Z"
+    name: cluster-example-3
+    namespace: default
+    ownerReferences:
+    - apiVersion: postgresql.cnpg.io/v1
+      controller: true
+      kind: Cluster
+      name: cluster-example
+      uid: 8401e567-5851-4cc0-84cd-f94c333d7e3a
+    resourceVersion: "1045"
+    uid: 1299252c-e001-4fae-8866-54e9b5c20aa0
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 1Gi
+    storageClassName: standard
+    volumeMode: Filesystem
+    volumeName: pvc-1299252c-e001-4fae-8866-54e9b5c20aa0
+  status:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 1Gi
+    phase: Bound
+metadata:
+  resourceVersion: "4277"

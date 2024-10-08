@@ -1,0 +1,266 @@
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"postgresql.cnpg.io/v1","kind":"Cluster","metadata":{"annotations":{},"name":"cluster-example","namespace":"default"},"spec":{"instances":3,"storage":{"size":"1Gi"}}}
+  creationTimestamp: "2024-10-08T08:10:56Z"
+  generation: 1
+  managedFields:
+  - apiVersion: postgresql.cnpg.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        .: {}
+        f:enableSuperuserAccess: {}
+        f:failoverDelay: {}
+        f:instances: {}
+        f:logLevel: {}
+        f:maxSyncReplicas: {}
+        f:minSyncReplicas: {}
+        f:postgresGID: {}
+        f:postgresUID: {}
+        f:primaryUpdateMethod: {}
+        f:primaryUpdateStrategy: {}
+        f:smartStopDelay: {}
+        f:startDelay: {}
+        f:stopDelay: {}
+        f:storage:
+          .: {}
+          f:resizeInUseVolumes: {}
+          f:size: {}
+        f:switchoverDelay: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2024-10-08T08:10:56Z"
+  - apiVersion: postgresql.cnpg.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:certificates:
+          .: {}
+          f:clientCASecret: {}
+          f:expirations:
+            .: {}
+            f:cluster-example-ca: {}
+            f:cluster-example-replication: {}
+            f:cluster-example-server: {}
+          f:replicationTLSSecret: {}
+          f:serverAltDNSNames: {}
+          f:serverCASecret: {}
+          f:serverTLSSecret: {}
+        f:cloudNativePGCommitHash: {}
+        f:cloudNativePGOperatorHash: {}
+        f:conditions: {}
+        f:configMapResourceVersion:
+          .: {}
+          f:metrics:
+            .: {}
+            f:cnpg-default-monitoring: {}
+        f:currentPrimary: {}
+        f:currentPrimaryTimestamp: {}
+        f:healthyPVC: {}
+        f:instanceNames: {}
+        f:instances: {}
+        f:instancesReportedState:
+          .: {}
+          f:cluster-example-1:
+            .: {}
+            f:isPrimary: {}
+            f:timeLineID: {}
+          f:cluster-example-2:
+            .: {}
+            f:isPrimary: {}
+            f:timeLineID: {}
+          f:cluster-example-3:
+            .: {}
+            f:isPrimary: {}
+            f:timeLineID: {}
+        f:instancesStatus:
+          .: {}
+          f:healthy: {}
+        f:latestGeneratedNode: {}
+        f:managedRolesStatus: {}
+        f:phase: {}
+        f:poolerIntegrations:
+          .: {}
+          f:pgBouncerIntegration: {}
+        f:pvcCount: {}
+        f:readService: {}
+        f:readyInstances: {}
+        f:secretsResourceVersion:
+          .: {}
+          f:applicationSecretVersion: {}
+          f:clientCaSecretVersion: {}
+          f:replicationSecretVersion: {}
+          f:serverCaSecretVersion: {}
+          f:serverSecretVersion: {}
+          f:superuserSecretVersion: {}
+        f:targetPrimary: {}
+        f:targetPrimaryTimestamp: {}
+        f:timelineID: {}
+        f:topology:
+          .: {}
+          f:instances:
+            .: {}
+            f:cluster-example-1: {}
+            f:cluster-example-2: {}
+            f:cluster-example-3: {}
+          f:nodesUsed: {}
+          f:successfullyExtracted: {}
+        f:writeService: {}
+    manager: manager
+    operation: Update
+    subresource: status
+    time: "2024-10-08T08:12:23Z"
+  name: cluster-example
+  namespace: default
+  resourceVersion: "1087"
+  uid: 8401e567-5851-4cc0-84cd-f94c333d7e3a
+spec:
+  affinity:
+    podAntiAffinityType: preferred
+  bootstrap:
+    initdb:
+      database: app
+      encoding: UTF8
+      localeCType: C
+      localeCollate: C
+      owner: app
+  enableSuperuserAccess: true
+  imageName: ghcr.io/cloudnative-pg/postgresql:16.1
+  instances: 3
+  logLevel: info
+  monitoring:
+    customQueriesConfigMap:
+    - key: queries
+      name: cnpg-default-monitoring
+    disableDefaultQueries: false
+  postgresGID: 26
+  postgresUID: 26
+  postgresql:
+    enableAlterSystem: true
+    parameters:
+      archive_mode: "on"
+      archive_timeout: 5min
+      dynamic_shared_memory_type: posix
+      log_destination: csvlog
+      log_directory: /controller/log
+      log_filename: postgres
+      log_rotation_age: "0"
+      log_rotation_size: "0"
+      log_truncate_on_rotation: "false"
+      logging_collector: "on"
+      max_parallel_workers: "32"
+      max_replication_slots: "32"
+      max_worker_processes: "32"
+      shared_memory_type: mmap
+      shared_preload_libraries: ""
+      ssl_max_protocol_version: TLSv1.3
+      ssl_min_protocol_version: TLSv1.3
+      wal_keep_size: 512MB
+      wal_receiver_timeout: 5s
+      wal_sender_timeout: 5s
+    syncReplicaElectionConstraint:
+      enabled: false
+  primaryUpdateMethod: restart
+  primaryUpdateStrategy: unsupervised
+  resources: {}
+  startDelay: 3600
+  stopDelay: 1800
+  storage:
+    resizeInUseVolumes: true
+    size: 1Gi
+  switchoverDelay: 3600
+status:
+  certificates:
+    clientCASecret: cluster-example-ca
+    expirations:
+      cluster-example-ca: 2025-01-06 08:05:56 +0000 UTC
+      cluster-example-replication: 2025-01-06 08:05:56 +0000 UTC
+      cluster-example-server: 2025-01-06 08:05:56 +0000 UTC
+    replicationTLSSecret: cluster-example-replication
+    serverAltDNSNames:
+    - cluster-example-rw
+    - cluster-example-rw.default
+    - cluster-example-rw.default.svc
+    - cluster-example-r
+    - cluster-example-r.default
+    - cluster-example-r.default.svc
+    - cluster-example-ro
+    - cluster-example-ro.default
+    - cluster-example-ro.default.svc
+    serverCASecret: cluster-example-ca
+    serverTLSSecret: cluster-example-server
+  cloudNativePGCommitHash: 293200a3
+  cloudNativePGOperatorHash: 63bfe3adec04d356c85fd72f4a4999c52f5903bd46f705eecd9a56b49bfe8230
+  conditions:
+  - lastTransitionTime: "2024-10-08T08:12:23Z"
+    message: Cluster is Ready
+    reason: ClusterIsReady
+    status: "True"
+    type: Ready
+  - lastTransitionTime: "2024-10-08T08:11:32Z"
+    message: Continuous archiving is working
+    reason: ContinuousArchivingSuccess
+    status: "True"
+    type: ContinuousArchiving
+  configMapResourceVersion:
+    metrics:
+      cnpg-default-monitoring: "665"
+  currentPrimary: cluster-example-1
+  currentPrimaryTimestamp: "2024-10-08T08:11:32.818600Z"
+  healthyPVC:
+  - cluster-example-1
+  - cluster-example-2
+  - cluster-example-3
+  instanceNames:
+  - cluster-example-1
+  - cluster-example-2
+  - cluster-example-3
+  instances: 3
+  instancesReportedState:
+    cluster-example-1:
+      isPrimary: true
+      timeLineID: 1
+    cluster-example-2:
+      isPrimary: false
+      timeLineID: 1
+    cluster-example-3:
+      isPrimary: false
+      timeLineID: 1
+  instancesStatus:
+    healthy:
+    - cluster-example-1
+    - cluster-example-2
+    - cluster-example-3
+  latestGeneratedNode: 3
+  managedRolesStatus: {}
+  phase: Cluster in healthy state
+  poolerIntegrations:
+    pgBouncerIntegration: {}
+  pvcCount: 3
+  readService: cluster-example-r
+  readyInstances: 3
+  secretsResourceVersion:
+    applicationSecretVersion: "637"
+    clientCaSecretVersion: "633"
+    replicationSecretVersion: "635"
+    serverCaSecretVersion: "633"
+    serverSecretVersion: "634"
+    superuserSecretVersion: "636"
+  switchReplicaClusterStatus: {}
+  targetPrimary: cluster-example-1
+  targetPrimaryTimestamp: "2024-10-08T08:10:56.457997Z"
+  timelineID: 1
+  topology:
+    instances:
+      cluster-example-1: {}
+      cluster-example-2: {}
+      cluster-example-3: {}
+    nodesUsed: 1
+    successfullyExtracted: true
+  writeService: cluster-example-rw
