@@ -57,12 +57,6 @@ cluster-example-superuser     kubernetes.io/basic-auth   9      57m
 ```mermaid
 graph TD
     subgraph Kubernetes Cluster
-        subgraph Control Plane
-            APIServer[API Server]
-            Scheduler[Scheduler]
-            ControllerManager[Controller Manager]
-        end
-
         subgraph CNPG Operator
             Operator[CNPG Operator]
         end
@@ -80,9 +74,6 @@ graph TD
         end
     end
 
-    APIServer --> Operator
-    Scheduler --> Operator
-    ControllerManager --> Operator
     Operator --> PGPod1
     Operator --> PGPod2
     Operator --> PGPod3
