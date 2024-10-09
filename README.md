@@ -167,7 +167,7 @@ I en annen terminal sett opp og kjør Minio client
  > mc ls cnpg/backups/example-backup/
 [2024-10-09 07:41:28 CEST]     0B base/
 [2024-10-09 07:41:28 CEST]     0B wals/
- > mc ls cnpg/backups/recoveredCluster/base/20241008T144435/
+ > mc ls cnpg/backups/example-backup/base/20241008T144435/
 [2024-10-08 16:44:40 CEST] 1.3KiB STANDARD backup.info
 [2024-10-08 16:44:40 CEST]  31MiB STANDARD data.tar
 ```
