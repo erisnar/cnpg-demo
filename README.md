@@ -1,5 +1,7 @@
 # CNPG
 
+## Eksempel
+
 Opprett nytt kind cluster
 
 ```bash
@@ -51,6 +53,45 @@ cluster-example-replication   kubernetes.io/tls          2      57m
 cluster-example-server        kubernetes.io/tls          2      57m
 cluster-example-superuser     kubernetes.io/basic-auth   9      57m
 ```
+
+```mermaid
+graph TD
+    subgraph Kubernetes Cluster
+        subgraph Control Plane
+            APIServer[API Server]
+            Scheduler[Scheduler]
+            ControllerManager[Controller Manager]
+        end
+
+        subgraph CNPG Operator
+            Operator[CNPG Operator]
+        end
+
+        subgraph PostgreSQL Cluster
+            PGPod1[PostgreSQL Pod 1]
+            PGPod2[PostgreSQL Pod 2]
+            PGPod3[PostgreSQL Pod 3]
+        end
+
+        subgraph Storage
+            PV1[Persistent Volume 1]
+            PV2[Persistent Volume 2]
+            PV3[Persistent Volume 3]
+        end
+    end
+
+    APIServer --> Operator
+    Scheduler --> Operator
+    ControllerManager --> Operator
+    Operator --> PGPod1
+    Operator --> PGPod2
+    Operator --> PGPod3
+    PGPod1 --> PV1
+    PGPod2 --> PV2
+    PGPod3 --> PV3
+```
+
+### Feilsøking
 
 Installer cnpg plugin
 
